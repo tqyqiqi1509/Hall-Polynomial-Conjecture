@@ -1,0 +1,88 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,enumitem,indentfirst}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\urlstyle{same}
+\setlength{\parindent}{1.5em}
+\setlength{\emergencystretch}{2em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Iso}{Iso}
+\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\soc}{soc}
+\DeclareMathOperator{\topm}{top}
+\DeclareMathOperator{\add}{add}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\gr}{gr}
+\newcommand{\FF}{\mathbb F}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\QQ}{\mathbb Q}
+\newcommand{\NN}{\mathbb N}
+\newcommand{\R}{\mathcal R}
+\newcommand{\gauss}[3]{\genfrac{[}{]}{0pt}{}{#1}{#2}_{#3}}
+\title{Hall polynomials for geometrically standard algebras}
+\author{Qiyue Tang}
+\date{}
+\begin{document}
+\maketitle
+\begingroup\renewcommand{\thefootnote}{}
+\footnotetext{2020 Mathematics Subject Classification. Primary 16G60; Secondary 16G20, 16G70.\newline Key words and phrases. Hall polynomial, representation-finite algebra, Auslander defect, mesh category, finite field.}
+\endgroup
+\begin{abstract}
+We prove the existence of integral Hall polynomials for geometrically standard representation-finite algebras over finite fields. In particular, Hall polynomials exist for every representation-finite algebra over a finite field of odd characteristic. The proof expresses Hall numbers through defect modules with prescribed top and socle and computes their automorphism-weighted masses on modulated mesh categories. A Fourier calculation reduces these masses to total masses on periodic Dynkin components; square boundaries are counted by Hall flags of nilpotent semilinear cycles.
+\end{abstract}
+
+\section{Introduction}
+Let $k=\FF_q$ and let $A$ be a finite-dimensional $k$-algebra of finite representation type. For finite-dimensional right $A$-modules $X,Y,L$ and a finite extension $E/k$, put $M_E=M\otimes_kE$ and define
+\[
+ F^L_{X,Y}(E)=\#\{U\subseteq L_E:U\simeq Y_E,\ L_E/U\simeq X_E\}.
+\]
+The first lower index is the quotient and the second is the submodule. A finite extension is \emph{conservative for $A$} if every indecomposable $A$-module remains indecomposable after scalar extension. We say that $A$ has Hall polynomials if, for every $X,Y,L$, there is a polynomial $\varphi^L_{X,Y}\in\ZZ[T]$ such that
+\begin{equation}\label{eq:hall}
+ F^L_{X,Y}(E)=\varphi^L_{X,Y}(|E|)
+ \qquad\text{for every conservative }E/k.
+\end{equation}
+Hall polynomials for representation-finite hereditary algebras were established by Ringel \cite{Ringel}. Hall polynomials for nilpotent cyclic-quiver representations provide another basic counting input; see \cite[Theorem 16]{Hubery}.
+
+A representation-finite algebra over an algebraically closed field is \emph{mesh-standard} if its category of indecomposable modules is equivalent, with its object labels, to the mesh category of its Auslander--Reiten quiver. We call $A$ \emph{geometrically standard} if $A_{\bar k}$ is mesh-standard. Mesh categories and their finite-field modulation are described in Section~\ref{sec:structure}.
+
+\begin{theorem}\label{thm:main}
+Every geometrically standard representation-finite algebra over a finite field has Hall polynomials.
+\end{theorem}
+
+\begin{corollary}\label{cor:odd}
+Every representation-finite algebra over a finite field of characteristic different from two has Hall polynomials.
+\end{corollary}
+
+The structural implication used in this corollary follows from the standard-form theorems reviewed in \cite{Bongartz13}; its passage from the projective points to the complete mesh category is given in Section~\ref{sec:structure}.
+
+The counting argument uses the contravariant defect of a short exact sequence. Its dimension vector determines the alternating sum of the three terms; its top and socle determine the minimal quotient and submodule. This yields an explicit orbit formula for a fixed Hall number. The remaining calculation concerns modules over the stable Auslander algebra, which is a finite modulated partial mesh algebra. We complete its translation intervals to finite cycles, decompose the local linear data into strings and bands, and integrate the quadratic boundary terms. The pure-band contribution is recovered from independently computed total masses on the original periodic components.
+
+\paragraph{Use of generative AI.}
+ChatGPT and Codex were used to develop mathematical arguments, perform computational checks, and draft and revise the manuscript.
+
+\input{defects}
+\input{cycles}
+\input{mesh_counting}
+\input{structure}
+\input{references}
+\medskip
+\begingroup\small
+\noindent\textsc{Zhili College, Tsinghua University, Beijing 100084, China}\par
+\noindent\textit{Email address:}\enspace\mbox{\href{mailto:tangqy24@mails.tsinghua.edu.cn}{\texttt{tangqy24@mails.tsinghua.edu.cn}}}\par
+\endgroup
+\end{document}

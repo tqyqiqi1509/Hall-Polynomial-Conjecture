@@ -1,0 +1,187 @@
+\section{Masses on modulated meshes}\label{sec:counting}
+\subsection{Linear relations and Gaussian moments}
+In this section, $h(U,V)$ denotes the dimension over the base field of the Hom space in the category containing $U,V$; the category will always be specified.
+
+A finite species consists of vertex fields $K_i/k$ and finite-dimensional $(K_j,K_i)$-bimodules $B_a$ for arrows $a:i\to j$. Its tensor algebra is $H=T_{\prod_iK_i}(\bigoplus_aB_a)$. We use covariant representations: an arrow acts by a $K_j$-linear map $B_a\otimes_{K_i}V_i\to V_j$. This convention will be applied to the opposite of the stable mesh category when counting right defect modules.
+
+Let $F$ be a species automorphism, including a vertex permutation $\rho$, field isomorphisms along that permutation, and invertible compatible transport of the arrow bimodules. It induces an exact equivalence, also denoted $F$, on representations. In the split case our convention is $(FV)_i=V_{\rho i}$, with transported arrow maps. For a dimension vector $v$, write $Fv$ for its transported dimension vector. For dimension vectors measured over the vertex fields define
+\begin{equation}\label{eq:euler}
+ \chi_H(v,w)=\sum_i[K_i:k]v_iw_i
+ -\sum_{a:i\to j}(\dim_kB_a)v_iw_j.
+\end{equation}
+For representations $U,V$, the two-term complex
+\begin{equation}\label{eq:homcomplex}
+ \begin{gathered}
+ \bigoplus_i\Hom_{K_i}(U_i,V_i)\xrightarrow{d}
+ \bigoplus_{a:i\to j}\Hom_{K_j}(B_a\otimes_{K_i}U_i,V_j),\\
+ d(f)_a=f_jU_a-V_a(1\otimes f_i)
+ \end{gathered}
+\end{equation}
+has kernel $\Hom_H(U,V)$ and cokernel $\Ext_H^1(U,V)$. For the latter assertion, write an extension on the direct-sum vertex spaces: its off-diagonal arrow blocks are arbitrary, and changing a vertex splitting adds $d(f)$. The difference of the dimensions of the two spaces is \eqref{eq:euler}.
+
+The \emph{transpose mesh} adds trace-dual reverse arrows and imposes the transpose of \eqref{eq:homcomplex}. The dual of a bimodule is $D_kB_a=\Hom_k(B_a,k)$, with reversed actions and the target field transported by $F$. The field trace identifies this with either relative dual; the trace pairing is nondegenerate because finite fields are separable. These choices specify the relations independently of bases. In split coordinates an old arrow $a:i\to j$ has a reverse arrow $y_a:\rho j\to i$, and the relation at $i$ is
+\[
+ \mu_i(x,y)=\sum_{t(a)=i}x_a y_a-\sum_{s(a)=i}y_a x_{\rho a}=0.
+\]
+Here $s(a)$ and $t(a)$ denote source and target.
+
+We also allow disjoint special cycles of vertices $v_t$ with $\rho v_t=v_{t-2}$ and arrows $\varepsilon_t:v_t\to v_{t+1}$. At $v_{t+2}$ the relation becomes
+$\mu_{v_{t+2}}+\varepsilon_{t+1}\varepsilon_t=0$.
+The central-arrow bimodules are invertible and their twofold transport equals that of the relation. Scalar signs may be absorbed in the reverse arrows.
+
+Fix a dimension vector $v$ and nonnegative vectors $r,u$. For a representation $D$, its arrow socle is the common kernel of outgoing arrows, and its arrow radical is the sum of incoming images. Put
+\begin{equation}\label{eq:moment}
+ Z_{v;r,u}(E)=\sum_{[D],\,\dim D=v}\frac1{|\Aut D|}
+ \prod_i\gauss{\dim(\soc_{\rm ar}D)_i}{r_i}{Q^{d_i}}
+ \gauss{\dim(\topm_{\rm ar}D)_i}{u_i}{Q^{d_i}},
+ \qquad Q=|E|.
+\end{equation}
+Here $d_i=[K_i:k]$, $E$ preserves all vertex fields, and vertex dimensions are over $K_i\otimes_kE$. This is the mass of triples $(D,S,K)$ with $S\subseteq\soc_{\rm ar}D$, $K\supseteq\rad_{\rm ar}D$, $\dim S=r$, and $\dim(D/K)=u$. The two subspaces are chosen independently.
+
+Fix the old-arrow representation $M$ and its subspaces $S,K$, and put $X=M/S$. Write $\alpha:K\hookrightarrow M$, $\beta:M\twoheadrightarrow X$, and $h=\beta\alpha$. A reverse arrow killing $S$ and landing in $K$ is uniquely a compressed arrow from the corresponding transported $X$-space to a $K$-space. Its parameter space is the dual of the degree-one space of \eqref{eq:homcomplex} for $(K,FX)$; the relation space is the dual of the degree-zero space. Denote these dual spaces by $C^1,C^0$. The relation map $\mu:C^1\to C^0$ has transpose $d$.
+
+On a special cycle write
+\[
+ \varepsilon_t=\alpha_{t+1}z_t\beta_t,\qquad
+ z_t:X_t\to K_{t+1},\qquad c_t(z)=z_{t+1}h_{t+1}z_t,
+\]
+with the prescribed transports. At ordinary vertices put $c(z)=0$. The compressed equations are $\mu(y)+c(z)=0$. For a nontrivial additive character $\psi:E\to\mathbb C^\times$, orthogonality gives
+\begin{equation}\label{eq:fourierexact}
+ \#\{(y,z):\mu(y)+c(z)=0\}
+ =Q^{\dim_EC^1-\dim_EC^0}
+ \sum_{f\in\ker d}\sum_z\psi\langle f,c(z)\rangle .
+\end{equation}
+Indeed, insert $Q^{-\dim C^0}\sum_{f\in(C^0)^*}\psi\langle f,\mu(y)+c(z)\rangle$ and sum over $y$. The sum vanishes unless $d(f)=0$, when it contributes $Q^{\dim C^1}$. The pairing includes field traces, and
+$\dim C^1-\dim C^0=-\chi_H(v-u,F(v-r))$.
+
+\subsection{Local strings, bands, and arrow spaces}
+On each orbit $o$ of $\rho$, the vertexwise data $(K,M,X,f)$ form a diagram
+\begin{equation}\label{eq:local}
+ K_t\xrightarrow{\alpha_t}M_t\xrightarrow{\beta_t}X_t,
+ \qquad K_t\xrightarrow{f_t}X_{t-1},
+\end{equation}
+after successively identifying the vertex fields. The maps $\alpha_t$ are injective and $\beta_t$ are surjective. An orbit of length $p$ gives a semilinear cycle with $3p$ vertices, with orientation $K\to M\to X\leftarrow K$ and residual field transport on one edge.
+
+The string and band classification applies to this local category. Its underlying quiver is a cycle, has no special loops or relations, has at most two incoming and outgoing arrows at each vertex, and each arrow has at most one composable successor and predecessor. Thus the Main Theorem of \cite{BTCB} applies; its hypotheses on special-loop polynomials are vacuous. Strings are finite intervals in the universal covering chain, pushed down with the prescribed transports. A closed reduced walk traverses the entire cycle, so every arrow of a band is invertible. Bands correspond to finite-dimensional modules over a skew Laurent ring. Every local object therefore decomposes uniquely as
+\[
+ E_o=W_o\oplus B_o,
+\]
+where $W_o$ is a sum of finite strings and $B_o$ has all arrows invertible. Write $b_o$ for its constant vertex rank. Injectivity of $\alpha$ and surjectivity of $\beta$ are tested on each summand; every band satisfies them. Fixed dimensions allow only finitely many string labels and multiplicities.
+
+For a string, a diagonal endomorphism coefficient is arbitrary in its vertex field and is transported along the finite interval. Its residue field is that vertex field. Hom spaces between strings are found by propagating coefficients along overlap intervals and imposing zero at obstructed ends. Hence their dimensions and automorphism polynomials $a_{W_o}(Q)$ are unchanged by vertex-conservative extension, and $a_{W_o}^{-1}\in\R$.
+
+We describe all old-arrow choices for fixed local diagrams. In the split case, an old-arrow orbit of length $l$ has endpoint periods dividing $l$. Pull both endpoint diagrams to the common $3l$-vertex cycle. The arrow orbit is a morphism between these pullbacks whose $M$-component kills the source $\ker\beta$ and lands in the target $\im\alpha$. Denote this vector space by $H_a^0(E_o,E_{o'})$ and its dimension over the current base field by $h_a^0$. Its induced $K$- and $X$-components are unique, and the $f$-square is exactly $d(f)=0$. With modulation, tensor the source with the arrow bimodule and use its invertible transport in the same equations; this defines $H_a^0$ without choosing an invariant arrow basis.
+
+For a local object $E$, let $S(E)$ have value $\ker\beta$ at its $M$-vertices and zero elsewhere. Let $E^+$ be the kernel of the quotient supported on the $M$-vertices with value $\coker\alpha$. Then
+\[
+ \Hom^0(E,E')=\Hom(E/S(E),(E')^+).
+\]
+These two operations replace strings by sums of intervals and leave bands unchanged.
+
+\begin{lemma}\label{lem:mixedhom}
+The string--string, string--band and band--string dimensions in every $H_a^0$, and the corresponding local Hom dimensions, depend only on string labels and band ranks.
+\end{lemma}
+\begin{proof}
+A pullback of a finite interval through a cyclic cover is a union of finite intervals: a starting lift determines the lift of its entire coefficient interval. For a map from an interval to a band, attach a target vector to each coefficient position. Interior equations transport it invertibly; an endpoint either leaves it free or sets it to zero. Each surviving interval contributes one full fibre. Maps in the opposite direction use row vectors. For two intervals, use the connected overlap intervals.
+
+With an arrow bimodule, each coefficient pair carries the corresponding vector fibre. Its holonomy gives invertible maps between successive fibres. Since their coefficient interval has distinct endpoints, these maps only transport a free fibre. The dimension is the sum of the dimensions of surviving fibres. The operations $E/S(E)$ and $(E')^+$ delete coefficient positions, so the same calculation applies to the shortened intervals. This proves the assertion for different endpoint periods and for semilinear transport.
+\end{proof}
+
+The mass for fixed local diagrams and all old-arrow choices is
+$Q^{\sum_a h_a^0(E_o,E_{o'})}/\prod_o|\Aut E_o|$.
+To see this, fix the vertex spaces and divide by their change-of-basis groups. Adding frames for $K,X$ introduces exactly the groups removed by the injective and surjective maps in \eqref{eq:local}. Each old-arrow orbit is then the independent vector space just described.
+
+\subsection{The quadratic character sum}
+On a special cycle the phase in \eqref{eq:fourierexact} is
+\begin{equation}\label{eq:phase}
+ \sum_t\Tr(f_tz_{t+1}h_{t+1}z_t),\qquad f_t:K_{t+2}\to X_t,
+\end{equation}
+where the matrix trace is followed by the field trace to $E$. For a fixed local diagram $E_{\rm loc}$, let $\mathcal W(E_{\rm loc})$ be the sum over all compressed central maps $z$ of $\psi$ applied to this phase. If there are no special arrows, set $\mathcal W(E_{\rm loc})=1$.
+
+\begin{lemma}\label{lem:pathsum}
+For fixed local strings $W$ and band ranks $b$, summation of $\psi$ applied to \eqref{eq:phase} factors as
+\[
+ \mathcal W(W\oplus B)=Q^{\gamma(W,b)}\mathcal W(B),
+\]
+where $\gamma(W,b)$ is a nonnegative integer independent of band parameters and of $\psi$.
+\end{lemma}
+\begin{proof}
+Use coefficient bases on strings. Their $h$ and $f$ maps are partial matchings with the prescribed field transport. Index a coefficient of $z_t$ by its target position $k$ in $K_{t+1}$ and source position $x$ in $X_t$. Its successor in \eqref{eq:phase}, when defined, is
+\[
+ (k,x)\longmapsto(f_t^{-1}x,h_{t+1}k).
+\]
+Here the inverse is that of a partial matching. Each coefficient has at most one predecessor and successor. Two successor steps move both coefficient positions forward on their local $h,f$ covering chains. A position on a finite string reaches an endpoint, so every component containing a string is a finite path.
+
+For a path with $m$ scalar variables and nonzero edge coefficients,
+\[
+ \sum_{x_1,\ldots,x_m\in E}
+ \psi\left(\sum_{j=1}^{m-1}c_jx_jx_{j+1}\right)=Q^{\lceil m/2\rceil}.
+\]
+Summing the first variable sets the second to zero and contributes $Q$; repeat at the new endpoint. An isolated variable also contributes $Q$. When one position belongs to a band, retain its entire vector space. The same path carries constant-rank vector fibres with nondegenerate pairings on adjacent fibres, and the same orthogonality calculation gives the appropriate power of the field size. Semilinear transport is bijective and field trace is nondegenerate, so this remains valid over the original field. The sum of the fibre dimensions times $\lceil m/2\rceil$ is $\gamma(W,b)$. The unintegrated variables form exactly the band--band block.
+\end{proof}
+
+\subsection{Recovery from periodic components}
+Let $J$ be the vertex support allowed for the representations and let $P$ be the union of the $\rho$-cycles entirely contained in $J$. Assume that special cycles are contained in $P$. Every nonzero band has equal positive rank along its orbit, so bands are supported on $P$.
+
+String and band summands have disjoint indecomposable types. Taking semisimple quotients of their endomorphism rings gives
+\[
+ |\Aut(W_o\oplus B_o)|=a_{W_o}(Q)|\Aut B_o|
+ Q^{h(W_o,B_o)+h(B_o,W_o)}.
+\]
+For fixed $W,b$ define
+\begin{align*}
+ \eta(W,b)={}&\sum_{a:o\to o'}\bigl(
+ h_a^0(W_o,W_{o'})+h_a^0(W_o,B_{o'})+h_a^0(B_o,W_{o'})\bigr)\\
+ &-\sum_o\bigl(h(W_o,B_o)+h(B_o,W_o)\bigr).
+\end{align*}
+Here all dimensions are over the current base field. Lemma~\ref{lem:mixedhom} makes this independent of the chosen band types. The remaining band sum is
+\[
+ P_b(Q;\psi)=\sum_{[B],\,\operatorname{rank}B=b}
+ \frac{Q^{\sum_{a\text{ in }P}h_a^0(B_o,B_{o'})}}{\prod_o|\Aut B_o|}
+ \mathcal W(B).
+\]
+Without special arrows the character factor is one. Combining the preceding computations yields
+\begin{equation}\label{eq:mixed}
+ Z_{v;r,u}(Q)=Q^{-\chi_H(v-u,F(v-r))}
+ \sum_b\sum_W\frac{Q^{\eta(W,b)+\gamma(W,b)}}{\prod_o a_{W_o}(Q)}
+ P_b(Q;\psi).
+\end{equation}
+The $K,M,X$ dimensions of $W$ must be $v-u-b,v-b,v-r-b$, respectively; these conditions specify the finite sums. At ordinary orbits $\gamma=0$.
+
+\begin{proposition}\label{prop:recovery}
+Suppose that the total representation mass on the full subquiver $P$, for each $\rho$-invariant dimension vector, is given by an element of $\R$ on all vertex-conservative extensions. Then every fixed-dimension, fixed-arrow-top and fixed-arrow-socle mass on $J$ has this property.
+\end{proposition}
+\begin{proof}
+Apply \eqref{eq:mixed} on $P$ with $r=u=0$ and $\rho$-invariant $v$. Denote its finite sum of string coefficients at rank $b$ by $A_{v,b}(Q)\in\R$. At $b=v$ the only string object is zero, with coefficient one. Hence
+\begin{equation}\label{eq:bandrecursion}
+ P_v(Q;\psi)=Q^{\chi_H(v,Fv)}Z^P_{v;0,0}(Q)
+ -\sum_{b<v}A_{v,b}(Q)P_b(Q;\psi).
+\end{equation}
+Here $b<v$ means componentwise inequality with at least one strict component. Starting with $P_0=1$, induction on total dimension gives $P_v\in\R$; the recursion also gives independence of $\psi$. Multiple periodic components can be treated as a direct product.
+
+Substitute into \eqref{eq:mixed} to obtain every Gaussian moment in $\R$. For fixed $v$, top and socle dimensions are bounded. Each matrix
+$\bigl(\gauss sr{Q^{d_i}}\bigr)_{0\le r,s\le v_i}$
+is triangular with diagonal entries one, and its inverse has entries in $\ZZ[Q]$ by finite back-substitution. Invert in both sets of variables in \eqref{eq:moment}.
+\end{proof}
+
+\subsection{Total mass on ordinary Dynkin components}
+For an ordinary transpose mesh with representation-finite species $H$, fix an old-arrow representation $M$. The reverse-arrow space is $\Ext_H^1(M,FM)^*$ by \eqref{eq:homcomplex}. Its total mass is therefore
+\begin{equation}\label{eq:ordinarytotal}
+ \sum_{[M],\,\dim M=v}\frac{Q^{\dim_E\Ext_H^1(M,FM)}}{a_M(Q)}.
+\end{equation}
+On conservative extensions of $H$, its labels, Hom dimensions and the permutation of labels induced by $F$ are fixed. Thus \eqref{eq:ordinarytotal} is a finite sum in $\R$.
+
+\begin{lemma}\label{lem:residues}
+If $H$ is acyclic and its symmetrized Euler form is positive definite, every indecomposable $H$-module has endomorphism algebra isomorphic as a $k$-algebra to a vertex field. Its conservative period is the least common multiple of the vertex-field degrees.
+\end{lemma}
+\begin{proof}
+At a sink $i$, a representation without the simple summand at $i$ has a surjective map
+$\bigoplus_{a:j\to i}B_a\otimes_{K_j}M_j\to M_i$.
+Replace $M_i$ by its kernel and reverse the incident bimodules using relative duals. The inverse at the new source takes the cokernel. The two exact sequences give mutually inverse functors on the subcategories without the corresponding simple summands. They preserve indecomposability and endomorphism rings.
+
+Let $E_H$ be the Euler matrix in a topological order and $G_H=E_H+E_H^{\mathsf t}$. A sink reflection changes coordinate $i$ to
+$-m_i+\sum_{j\to i}(\dim_kB_{ij})m_j/[K_i:k]$.
+Solving these coordinate updates successively along a complete sink sequence gives $c=-E_H^{-1}E_H^{\mathsf t}$. The transformations preserve the integral lattice and $G_H$. Positive definiteness implies that the integral isometry group is finite: each column has fixed bounded $G_H$-length and hence finitely many possible integral values. Thus $c^h=1$ for some $h$. Also $c-1=-E_H^{-1}G_H$ is invertible, so $1+c+\cdots+c^{h-1}=0$.
+
+Repeat the sink sequence on a nonzero indecomposable until it becomes the simple at the current sink. If this never happens, $m,cm,\ldots,c^{h-1}m$ are all nonnegative, the first is nonzero, and their sum is zero, a contradiction. Endomorphism rings are preserved along these reflections and the final simple has a vertex field as its endomorphism ring. The same bound gives finitely many possible indecomposables. Every vertex field already occurs at its simple, giving the asserted least common multiple.
+\end{proof}

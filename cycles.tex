@@ -1,0 +1,119 @@
+\section{Nilpotent cycles and square boundaries}\label{sec:cycles}
+\subsection{Semilinear cyclic Hall polynomials}
+Let $K$ be a finite field of order $z$, let $p\ge1$, and index vertices by $\ZZ/p\ZZ$. Fix automorphisms $\theta_i$ of $K$. A semilinear cyclic representation consists of finite-dimensional $K$-spaces $V_i$ and $\theta_i$-semilinear maps $T_i:V_i\to V_{i+1}$. A morphism is a collection of $K$-linear maps commuting with the $T_i$. We restrict to nilpotent representations: every sufficiently long consecutive composite of arrows is zero.
+
+For $i\in\ZZ/p\ZZ$ and $l\ge1$, let $I(i,l)$ be the chain with basis positions of colours $i,i+1,\ldots,i+l-1$, with the prescribed semilinear transport between consecutive positions and zero after the last position. A label is a finitely supported family $(m_{i,l})$ of nonnegative integers, denoting $\bigoplus_{i,l}I(i,l)^{m_{i,l}}$.
+
+\begin{lemma}\label{lem:cyclic}
+For fixed chain labels, the automorphism orders and Hall numbers are polynomials in $z$ with integer coefficients, independent of the automorphisms $\theta_i$. The automorphism polynomials are monic and their inverses belong to $\ZZ[z,z^{-1},(z^j-1)^{-1}:j\ge1]$.
+\end{lemma}
+\begin{proof}
+Put $V=\bigoplus_iV_i$ and write $T$ for the additive map on $V$ given by the arrows and set $W_h=\ker T\cap\im T^h$, degree by degree. Choose bases of the descending flags $W_h$ and lift a basis of $W_h/W_{h+1}$ through $T^h$. The resulting strings of length $h+1$ are independent: applying the highest remaining power of $T$ to a linear relation gives a relation among the chosen socle basis vectors. Semilinearity applies an invertible field automorphism to each coefficient, so the coefficients vanish. The number of chain positions is
+\[
+ \sum_{h\ge0}(h+1)\dim_K(W_h/W_{h+1})
+ =\sum_{h\ge0}\dim_KW_h=\dim_KV.
+\]
+The last identity follows from
+$\dim W_h=\dim\im T^h-\dim\im T^{h+1}$.
+This proves existence of the chain decomposition. Its multiplicities are determined by the colours and dimensions of $W_h/W_{h+1}$, proving uniqueness.
+
+Put $r_{i,h}(V)=\dim_K(\im T^h)_i$ and
+$z_{i,h}(V)=r_{i,h}(V)-r_{i,h+1}(V)$. The chain multiplicities can equivalently be recovered by
+\begin{equation}\label{eq:chainrecover}
+ m_{i,l}=z_{i+l-1,l-1}(V)-z_{i+l,l}(V),
+\end{equation}
+with colour indices read modulo $p$. Thus fixed total dimension gives a finite label set.
+
+For integers $0\le e\le b$, the Gaussian polynomial
+$\gauss be z=\prod_{j=0}^{e-1}(z^{b-j}-1)/(z^{e-j}-1)$
+counts $e$-dimensional subspaces of $K^b$ and is zero outside this range. 
+First count a semisimple submodule $S$ of $L$ with quotient $X$. Write $s_i=\dim_KS_i$ and
+\[
+ W_{i,h}=(\soc L)_i\cap(\im T^h)_i,\qquad
+ c_{i,h}=r_{i,h}(L)-r_{i,h}(X).
+\]
+A submodule $U\simeq S$ is a tuple of subspaces $U_i\subseteq(\soc L)_i$. Since
+$\im(T^h:L/U\to L/U)=(\im T^h+U)/U$,
+its quotient is $X$ precisely when
+$\dim(U_i\cap W_{i,h})=c_{i,h}$ for all $i,h$, by \eqref{eq:chainrecover}. Define
+\[
+ b_{i,h}=\dim W_{i,h}-\dim W_{i,h+1},\qquad
+ e_{i,h}=c_{i,h}-c_{i,h+1}.
+\]
+The count is zero unless $c_{i,0}=s_i$, the tails vanish, and $0\le e_{i,h}\le b_{i,h}$. Otherwise it is
+\begin{equation}\label{eq:semisimplecount}
+ F^L_{X,S}(z)=
+ \prod_i\left(z^{\sum_{h<a}e_{i,h}(b_{i,a}-e_{i,a})}
+ \prod_{h\ge0}\gauss{b_{i,h}}{e_{i,h}}{z}\right).
+\end{equation}
+To obtain \eqref{eq:semisimplecount}, choose the image in each successive flag quotient and then its graph into the deeper unchosen quotient spaces. These choices contribute, respectively, the Gaussian factors and the displayed power of $z$.
+
+Use the unmodified Hall multiplication $u_Xu_Y=\sum_LF^L_{X,Y}u_L$. For a module $M$, choose $l\ge1$ with $\rad^lM=0$, and let $S_h=\rad^hM/\rad^{h+1}M$, where the radical is the arrow image. Expanding $u_{S_0}\cdots u_{S_{l-1}}$ by left-associated multiplication uses only \eqref{eq:semisimplecount}. A term $u_N$ in this product corresponds to a descending flag with these semisimple quotients. It satisfies
+$\rad^hN\subseteq N_h$ and hence $r_{i,h}(N)\le r_{i,h}(M)$. Equality for all $i,h$ implies $N\simeq M$ by \eqref{eq:chainrecover}; then the only possible flag is the radical filtration. Its coefficient is one. Therefore
+\[
+ u_{S_0}\cdots u_{S_{l-1}}
+ =u_M+\sum_{\sum_{i,h\ge1}r_{i,h}(N)<\sum_{i,h\ge1}r_{i,h}(M)}a_{M,N}(z)u_N
+\]
+with integer polynomial coefficients. Induction expresses every $u_M$ as an integer polynomial combination of words in semisimple modules. Expand the second factor of $u_Xu_Y$ in such words and multiply successively on the right by semisimple factors. This proves the Hall assertion, with the same polynomials for every holonomy.
+
+A map between two chains is determined by the image of its first generator: this image has the required colour and is killed by the prescribed power of $T$. Its free coordinates are counted by a power of $z$. The endomorphism ring of one chain has residue field $K$; the leading generator coefficient is arbitrary in $K$, and zero leading coefficient gives the nilpotent radical. Thus, if $M=\bigoplus_I I^{m_I}$ and $|\End(M)|=z^{e_M}$,
+\[
+ |\Aut(M)|=z^{e_M-\sum_I m_I^2}\prod_I|\operatorname{GL}_{m_I}(K)|.
+\]
+The exponent and factors depend only on the labels, proving the final assertion.
+\end{proof}
+
+A Hall flag polynomial with successive quotients $T_1,\ldots,T_n$ means the coefficient of $u_L$ in $u_{T_n}\cdots u_{T_1}$, or equivalently the number of flags $0=L_0\subseteq\cdots\subseteq L_n=L$ with $L_j/L_{j-1}\simeq T_j$. Lemma~\ref{lem:cyclic} applies as well to a disjoint union of semilinear cycles, by taking products.
+
+\subsection{Total mass at a square boundary}\label{sec:square}
+For integers $n,s\ge1$, consider vertices $(i,t)$ with $0\le i<n$ and $t\in\ZZ/s\ZZ$. Put a copy of $K$ at each vertex. The forward arrows
+$a_{i,t}:(i,t)\to(i+1,t)$ are linear, the central arrows
+$\varepsilon_t:(0,t)\to(0,t+1)$ are $\theta_t$-semilinear, and the reverse arrows
+$b_{i,t}:(i+1,t)\to(i,t+2)$ have transport $\theta_{t+1}\theta_t$.
+Composition is written with the rightmost map acting first. For $n\ge2$ impose
+\begin{align}
+ \varepsilon_{t+1}\varepsilon_t&=b_{0,t}a_{0,t},\label{eq:square}\\
+ a_{i-1,t+2}b_{i-1,t}&=b_{i,t}a_{i,t}\quad(1\le i<n-1),\notag\\
+ a_{n-2,t+2}b_{n-2,t}&=0.\notag
+\end{align}
+For $n=1$ impose just $\varepsilon_{t+1}\varepsilon_t=0$.
+
+\begin{proposition}\label{prop:squaretotal}
+For every fixed vertex-dimension vector, the total mass $\sum_{[V]}1/|\Aut(V)|$ of these representations is given by an element of $\ZZ[z,z^{-1},(z^j-1)^{-1}:j\ge1]$, independent of the $\theta_t$.
+\end{proposition}
+\begin{proof}
+Fix the forward-chain representations $M_t$ of $0\to1\to\cdots\to n-1$. They are sums of interval representations, so only finitely many types occur in the fixed dimension. At the initial vertex define
+\[
+ F_{0,t}=0,\quad F_{j,t}=\ker(M_{0,t}\to M_{j,t})\ (1\le j<n),\quad F_{n,t}=M_{0,t}.
+\]
+Write $f_{j,t}=\dim_KF_{j,t}$. The image of evaluation at zero on $\Hom(M_{t+2},M_t)$ consists exactly of maps preserving these endpoint flags, with the indicated scalar transport. Indeed, an interval starting at zero and ending at $a$ contributes a flag direction born in layer $a+1$; a map between two such directions exists precisely when the target birth layer is no larger than the source birth layer. Intervals starting later contribute zero at the endpoint. This proves both inclusion and surjectivity onto every allowed block.
+
+The transpose, under trace pairings, of the reverse-arrow relation map is the usual chain Hom differential. Its cokernel is $\Ext^1(M_{t+2},M_t)$, with the source transported to make the maps linear. Pairing the boundary term in \eqref{eq:square} with the kernel of this differential shows that reverse arrows exist precisely when
+\begin{equation}\label{eq:lowerflags}
+ \varepsilon_{t+1}\varepsilon_t F_{j,t}\subseteq F_{j-1,t+2}
+ \quad\text{for all }t,j.
+\end{equation}
+For completeness, in adapted flag bases the Hom evaluation has a block from source layer $a$ to target layer $b$ exactly when $b\le a$. Its trace annihilator has only the opposite, strictly decreasing blocks, which is \eqref{eq:lowerflags}. If this condition holds, the reverse-arrow solution set is an affine space of size
+$z^{\sum_t\dim_K\Ext^1(M_{t+2},M_t)}$.
+Transport does not change an interval label, so these dimensions depend only on the forward-chain types.
+
+Condition~\eqref{eq:lowerflags} forces every composite of $2n$ central arrows to vanish. Let $N$ range over the finite set of nilpotent cyclic chain labels with vertex dimensions $f_{n,t}$. Define $\Phi N$ by replacing each central arrow by the two-step map from $t$ to $t+2$. It is a representation of $\gcd(s,2)$ disjoint cycles. On every chain, taking alternate positions gives the chain decomposition of $\Phi N$; this operation on labels is independent of the field and of its automorphisms.
+
+Let $H_{\Phi N,f}(z)$ count flags of subrepresentations of $\Phi N$ whose $j$th layer has vertex dimensions $f_{j,t}-f_{j-1,t}$ and is semisimple. Equivalently these flags satisfy \eqref{eq:lowerflags}. It is a Hall flag polynomial by Lemma~\ref{lem:cyclic}. The order of the stabilizer of the given flags, in $\prod_t\operatorname{GL}(M_{0,t})$, is
+\[
+ p_f(z)=\prod_t\left(
+ z^{\sum_{a<b}(f_{a,t}-f_{a-1,t})(f_{b,t}-f_{b-1,t})}
+ \prod_{j=1}^n|\operatorname{GL}_{f_{j,t}-f_{j-1,t}}(K)|\right).
+\]
+Double-count pairs consisting of a central representation of type $N$ and an admissible flag. Its representation orbit has size $\prod_t|\operatorname{GL}(M_{0,t})|/a_N(z)$; the space of flags has size $\prod_t|\operatorname{GL}(M_{0,t})|/p_f(z)$. Hence the number of central-arrow choices for the fixed flags is
+\[
+ p_f(z)\sum_N\frac{H_{\Phi N,f}(z)}{a_N(z)}.
+\]
+Finally quotient by the automorphisms of the fixed forward chains. The total mass is
+\begin{equation}\label{eq:coretotal}
+ \sum_{[M_t]}
+ \frac{z^{\sum_t\dim_K\Ext^1(M_{t+2},M_t)}}{\prod_t a_{M_t}(z)}
+ \ p_{f(M)}(z)\sum_N\frac{H_{\Phi N,f(M)}(z)}{a_N(z)}.
+\end{equation}
+All sums are finite. Interval automorphism orders and the $a_N$ have only powers of $z$ and $z^j-1$ as factors. This proves the result, including $n=1$, for which the single flag step requires the two-step maps to vanish.
+\end{proof}

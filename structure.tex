@@ -1,0 +1,101 @@
+\section{Standard forms and finite completion}\label{sec:structure}
+\subsection{Descent of the mesh presentation}
+
+We first explain why geometric standardness gives a presentation over the original field. For a finite-dimensional algebra $C$, its radical grading is
+\[
+ \gr C=\bigoplus_{j\geq0}\rad^j C/\rad^{j+1}C.
+\]
+A radical-graded algebra is an algebra isomorphic to this graded algebra, with its grading forgotten.
+
+\begin{lemma}\label{lem:grading}
+Let $k$ be a finite field. If $C_{\bar k}$ is radical-graded, then $C$ is radical-graded.
+\end{lemma}
+\begin{proof}
+Put $B=\gr C$. Scalar extension commutes with the radical because $k$ is perfect. Choose a geometric isomorphism $C_{\bar k}\to B_{\bar k}$. Its associated graded map is a graded automorphism of $B_{\bar k}$; composing with its inverse makes the associated graded map the identity.
+
+Let $U$ be the reduced algebraic group of automorphisms of $B$ inducing the identity on its associated graded algebra. This group is smooth since $k$ is perfect. It is connected: write an automorphism in homogeneous blocks. Its diagonal blocks are identities and its other blocks go from degree $a$ to a strictly larger degree $b$. Conjugation by the grading action multiplies these blocks by $t^{b-a}$. It extends to $t=0$, with value the identity. Thus every geometric point of $U$ belongs to the identity component. The reduced scheme of isomorphisms $C\to B$ inducing the graded identity is a torsor under $U$: composing any two such isomorphisms gives exactly an element of $U$. Lang's theorem \cite{Lang} gives a rational point of this torsor.
+\end{proof}
+
+Take one representative of each indecomposable $A$-module and let $G$ be their direct sum. Over $\bar k$, $G_{\bar k}$ contains every geometric indecomposable. Indeed, any geometric indecomposable is defined over a finite separable extension $E/k$, and is a summand of the scalar extension of its restriction to $k$. Also
+\[
+ \End_A(G)/\rad\End_A(G)=\prod_i\FF_{q^{d_i}},
+\]
+so after splitting the fields its primitive summands have multiplicity one. Thus $\End_A(G)_{\bar k}$ is the basic endomorphism algebra of all geometric indecomposables.
+
+In a mesh category, arrows are irreducible morphisms and the defining relations are homogeneous of degree two. In finite representation type its arrow ideal is nilpotent, so the grading is the radical grading. Lemma~\ref{lem:grading} descends this grading to $\End_A(G)$. One can align the vertex idempotents with the original summand projections: if two orthogonal systems $(e_i)$ and $(f_i)$ coincide modulo the radical, then
+$u=\sum_i f_i e_i$ lies in $1+\rad\End_A(G)$ and satisfies $f_i u=u e_i$.
+
+Here is the resulting modulated presentation. A partial translation quiver has a partially defined injective translation $\tau$ on vertices. For every arrow $a:y\to x$ with $\tau x$ defined there is a companion
+\[
+ \sigma a:\tau x\longrightarrow y;
+\]
+where defined, $\sigma^2$ is the translation on arrows. Over a splitting field, the relation at $x$ is the sum of the length-two paths $a\,\sigma a$, with the coefficients from its almost-split sequence. Over $k$, the vertices have their residue fields, the arrow spaces are the corresponding irreducible-morphism bimodules, and the relations are the coevaluation tensors for the almost-split pairings. Both bimodules and pairings are actual descended spaces, rather than a choice of individually invariant geometric arrows. The geometric quadratic presentation implies the presentation over $k$: scalar extension is faithfully flat, so the descended degree-two relations generate the entire kernel.
+
+The stable Auslander algebra
+\[
+ \Lambda=\End_A(G)/[\operatorname{proj} A]
+\]
+is obtained by deleting the projective vertices and every path through them. A map between nonprojective indecomposables factoring through a projective lies in the square of the radical, since neither factor can split. Thus this quotient does not change the remaining arrow spaces. Its relation at an old vertex is exactly the sum of the remaining length-two mesh paths. The sum can be empty. Translation is retained only when both translated endpoints remain.
+
+\subsection{Periodic components}
+
+Call a vertex periodic if every positive and negative iterate of its translation exists. The full subquiver on periodic vertices of a representation-finite Auslander--Reiten quiver is a disjoint union of quotients of repetitive Dynkin quivers; this is the stable-subquiver statement of Riedtmann's structure theorem \cite[Hauptsatz]{Riedtmann}. It applies to the stable full subquiver of an arbitrary representation-finite algebra. Its vertices need not constitute all nonprojective vertices.
+
+We record the cuts and their finite-field forms needed for counting. For Dynkin trees other than $A_{2n}$, orient the tree away from its central fixed vertex, or choose an orientation invariant under its diagram automorphisms. The automorphisms of the repetitive quiver are generated by translation and diagram automorphisms preserving such a cut. For $A_{2n}$ there is instead a generator $\rho$ with $\rho^2=\tau$. These assertions, including the exceptional generator, are given explicitly in \cite[Proposition 10]{Bongartz23}. They concern repetitive Dynkin quivers and do not require that the algebra whose stable subquiver is being considered be selfinjective.
+
+In the first case, the forward arrows form a finite union of Dynkin species $H$; the companions are the transpose arrows. Deck transformations and finite-field descent preserve this division. The automorphism transporting one mesh to the next becomes the species automorphism $F$ of Section~\ref{sec:counting}. Folding a positive definite Dynkin form remains positive definite: the folded form is its restriction to the invariant subspace, with the vertex-field degrees as symmetrizing weights. Lemma~\ref{lem:residues} and \eqref{eq:ordinarytotal} therefore give the total mass on every vertex-conservative extension.
+
+For completeness, the exceptional cut has the following coordinates. Label the two arms of $A_{2n}$ by $(i,p)$, where $0\leq i<n$ is distance from the centre and $p=0,1$ distinguishes the arms. If $l\in\ZZ$ is the repetition coordinate, set $t=2l+p$. Then $\tau$ changes $t$ by two and $\rho$ changes it by one, after choosing the direction of indexing. The outward arm arrows are $a_{i,t}$; the central arrows are $\varepsilon_t$. Their companions are the reverse arm arrows $b_{i,t}$. Replacing the reverse arrows at distance $i$ by $(-1)^{i+1}$ times themselves gives precisely the square-boundary equations of Section~\ref{sec:square}. A quotient by a power of $\rho$ makes $t$ cyclic. The two arms are connected, so their residue fields have equal size after following the descended component.
+
+The same description holds without splitting the field. Along an arm, choose successive identifications of the vertex fields and trivializations of the invertible arrow bimodules. There is no obstruction, since an arm is a tree. At the centre, retain the invertible bimodule of each $\varepsilon_t$ and its field transport. The two summands in the central relation are the tensor product of two successive central bimodules and the first arm-return bimodule. Each projection of the relation bimodule is an isomorphism: it is one after extension to $\bar k$, hence one before extension. The internal relations identify consecutive arm-return bimodules in the same way. Choose the reverse-arrow identifications successively along the arm. This gives the displayed square-boundary equations over the original fields, with all remaining transport in the $\varepsilon_t$. In particular, no condition that their cyclic holonomy be trivial has been imposed. Proposition~\ref{prop:squaretotal} applies.
+
+\subsection{Completion of the finite translation intervals}
+
+We complete the finite partial quiver underlying $\Lambda$ by adding vertices.
+
+\begin{lemma}\label{lem:completion}
+A finite modulated partial mesh quiver of the preceding form is a full vertex quotient of a finite transpose mesh with square-boundary components. Its original periodic subquiver is unchanged. Every added translation cycle has a new vertex.
+\end{lemma}
+\begin{proof}
+Every component of the partial permutation $\tau$ is a cycle or an interval. Give an interval coordinates $0,\ldots,l_i$, with $\tau$ decreasing the coordinate by one. Let $L=\max_i l_i$, taking $L=0$ if there are no intervals. Choose an even integer $M>2L+2$, divisible by the lengths of the old cycles and by the orders of the finitely many field identifications already prescribed. Complete each interval to a cycle of length $M$.
+
+Follow companion arrows. A chain that is already closed has both endpoints on old periodic cycles and is left unchanged. Otherwise, if one arrow is
+$a_0:(i,p)\to(j,q)$, its successive companions have coordinates
+\[
+ a_{2r}:(i,p-r)\to(j,q-r),\qquad
+ a_{2r+1}:(j,q-r-1)\to(i,p-r).
+\]
+Complete this chain modulo $2M$, identifying the coordinates of an old periodic endpoint modulo its old period. If both endpoints belong to finite intervals, any new arrow with both endpoints old would require, in the even case,
+$u-v=p-q+kM$. The difference between the two sides with $k=0$ has absolute value at most $2L$; hence $k=0$. For odd arrows the analogous bound is $2L+1$. The allowable old indices form the original consecutive chain: the companion construction stops exactly when an endpoint leaves its interval. Thus no new old-to-old arrow occurs. With one periodic endpoint, the finite endpoint determines the unique old occurrence, while divisibility of $M$ by the old period preserves the other phase. With two periodic endpoints the chain was already closed.
+
+Transport the vertex fields along these cycles. At a newly chosen closing edge use the inverse of the product of the existing field identifications. Extend each arrow bimodule by alternating relative duality along its companion chain. Its return transport is retained as an invertible bimodule map; it is not required to be the identity. The even length and the chosen field divisibility make the endpoint types agree.
+
+On each open companion chain, alternate the forward and reverse designation. Any descent automorphism preserves its two ends and commutes with taking companions, so it preserves this designation; a shift along a finite chain cannot preserve its ends. On the old closed chains use the Dynkin cuts, including the central exceptional cut, just constructed. The double-dual identifications give a species transport $F$. Choose the newly added mesh pairings to be the transpose pairings. On an old open chain, the existing nonzero mesh coefficients can be absorbed successively into its reverse arrows; no cyclic consistency condition occurs. On the closed components the preceding Dynkin-coordinate calculation supplies the compatible choice. This gives the required transpose relations and the exceptional square relations.
+
+Finally quotient by all new vertex idempotents. Each relation at a new vertex vanishes, since its endpoint is new. At an old vertex whose predecessor was missing, the relation has a new translated endpoint and vanishes as well. Every other old relation loses exactly the terms with new intermediate vertices. It is therefore precisely its original partial mesh relation. The algebra is a path algebra modulo these relations, so checking the generators of the relation ideal proves equality of the quotient, not just equality of its arrows. An added cycle contains a new vertex because $M>L+1$.
+\end{proof}
+
+The construction also applies to the opposite category. Reverse arrows and translation, and replace each bimodule by its opposite with the interchanged endpoint actions. Pairings and the square-boundary equations are carried to the corresponding opposite equations.
+
+\subsection{Proof of the main theorem}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Apply the preceding presentation and completion to the opposite of $\Lambda$, so that its covariant representations are the right defect modules used in Section~\ref{sec:defects}. A representation of the quotient is exactly a representation of the completion with zero spaces at all new vertices. Each added translation cycle contains such a vertex, and hence cannot support a nonzero local band. Thus the full cycles supporting bands are exactly the original periodic components.
+
+Fix a conservative extension $E/k$ of $A$. Its degree is coprime to every residue-field degree $d_i$ from Section~\ref{sec:defects}. All vertex fields of the presentation and completion are copies of these fields. In the ordinary periodic components, Lemma~\ref{lem:residues} shows that no extra extension condition is required to preserve the indecomposables of the Dynkin species. Equation~\eqref{eq:ordinarytotal} gives their total masses in $\R$. On an exceptional component, Proposition~\ref{prop:squaretotal} gives the same conclusion; replacing its field-size variable by $Q^d$ preserves $\R$.
+
+Proposition~\ref{prop:recovery} now gives all dimension, arrow-top and arrow-socle masses supported on the original vertices. On $\Lambda$ the arrow ideal is the radical, since the mesh grading has nilpotent positive part and semisimple degree zero. These are therefore the actual module top and socle. At vertex $i$, a defect dimension $\delta_i$ measured over $k$ is dimension $\delta_i/d_i$ over its residue field; a nonintegral quotient means that the corresponding mass is zero. We have obtained exactly the masses required by the defect criterion, on every conservative extension of $A$. Corollary~\ref{cor:criterion} proves the theorem.
+\end{proof}
+
+We finish by identifying the standardness input in odd characteristic, including the passage to the full category of indecomposables.
+
+\begin{proof}[Proof of Corollary~\ref{cor:odd}]
+Over an algebraically closed field, a basic representation-finite algebra is distributive. Its ray category is mild and representation-finite. In characteristic different from two it is isomorphic to the linearization of its ray category. These are the standard-form results summarized in \cite[Theorems 2--4]{Bongartz13}. Moreover, its ray-standard form and its older standard form, obtained from the projective points of the mesh category, agree \cite[Theorem 18]{Bongartz13}.
+
+Here is why the latter category is the full category of indecomposables in the present setting. Let $\mathcal C$ be the mesh category of the Auslander--Reiten quiver. The universal mesh cover maps to the category of indecomposables by the covering theorem \cite[Theorem 14]{Bongartz13}. The radical of that finite category is nilpotent, say its $N$th power is zero. A length-$N$ path upstairs maps to zero; the covering map is injective on each individual Hom space, so it is zero upstairs. Every path downstairs lifts, and hence all paths of length $N$ in $\mathcal C$ vanish. Thus $\mathcal C$ is finite-dimensional.
+
+The Auslander-category covering criterion \cite[Theorem 15]{Bongartz13} identifies $\mathcal C$ with the category of indecomposables of its algebra of projective points. Intrinsically these points are detected by the projective dimensions of the corresponding simple functors: at an original projective point the radical inclusion gives a resolution of length at most one; at a nonprojective point its mesh resolution is minimal, has a nonzero degree-two term, and has projective dimension two. Hence the projective points in this identification are exactly the original ones. Their algebra is the older standard form, which is isomorphic to the original basic algebra by the preceding standard-form theorem. This proves mesh-standardness of the full category.
+
+\enlargethispage{2\baselineskip}
+For a finite field $k$, $A_{\bar k}$ remains representation-finite. Indeed, every geometric indecomposable is a summand of the extension of a restricted module over a finite field of definition, and hence a summand of the extension of one of the finitely many indecomposable $A$-modules. The algebraically closed odd-characteristic result just proved makes $A$ geometrically standard. Theorem~\ref{thm:main} applies. Morita equivalence preserves scalar extension, submodule Hall numbers and indecomposability, so passage to a basic algebra does not change the conclusion.
+\end{proof}

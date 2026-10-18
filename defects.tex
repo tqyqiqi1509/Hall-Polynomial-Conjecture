@@ -1,0 +1,155 @@
+\section{Defects and Hall numbers}\label{sec:defects}
+Fix representatives $I_1,\ldots,I_m$ of the indecomposable $A$-modules, and write
+\[
+ K_i=\End_A(I_i)/\rad\End_A(I_i)=\FF_{q^{d_i}},\qquad
+ D_A=\operatorname{lcm}(d_1,\ldots,d_m).
+\]
+Finite division rings are fields. Since $k$ is perfect, radicals commute with separable scalar extension. Thus $E=\FF_{q^r}$ is conservative precisely when $\gcd(r,D_A)=1$. Moreover, the modules $(I_i)_E$ form a complete, nonrepeating indecomposable list over every such $E$. Indeed, an $A_E$-module is a direct summand of the scalar extension of its restriction to $A$, because $E/k$ is separable. The restriction is in $\add(\bigoplus_i I_i)$. The semisimple quotient of the endomorphism algebra of this sum becomes $\prod_i(K_i\otimes_kE)$, a product of fields; this also proves that the extended indecomposables remain pairwise nonisomorphic.
+
+Write $h(M,N)=\dim_k\Hom_A(M,N)$ and $e(M)=h(M,M)$. For $M=\bigoplus_i I_i^{n_i}$, set
+\begin{equation}\label{eq:aut}
+ a_M(T)=T^{e(M)-\sum_i d_i n_i^2}
+ \prod_i\prod_{j=0}^{n_i-1}(T^{d_i n_i}-T^{d_i j}).
+\end{equation}
+Empty products equal one, so $a_0=1$. The formula for the units of a finite algebra, applied to $\End_A(M)$, gives $a_M(|E|)=|\Aut(M_E)|$. All these polynomials are monic.
+
+We use the subring
+\[
+ \R=\ZZ[T,T^{-1},(T^j-1)^{-1}:j\ge1]\subseteq\QQ(T).
+\]
+The inverses of the polynomials in \eqref{eq:aut} belong to $\R$.
+
+\begin{lemma}\label{lem:integer}
+Let $R\in\R$. If $R(Q)$ is an integer for an unbounded set of positive integers $Q$, at which it is defined, then $R\in\ZZ[T]$.
+\end{lemma}
+\begin{proof}
+Write $R=P/B$ with $P,B\in\ZZ[T]$ and $B$ monic. Division in $\ZZ[T]$ gives $P=BH+U$ with $\deg U<\deg B$. Along the given integers, $U(Q)/B(Q)$ is an integer tending to zero. Hence $U$ has infinitely many zeros and vanishes.
+\end{proof}
+
+\subsection{Minimal sequences}
+Put $G=\bigoplus_iI_i$ and let
+\[
+ \Lambda=\End_A(G)/[\operatorname{proj}A],
+\]
+where $[\operatorname{proj}A]$ is the ideal of maps factoring through projective modules. We use contravariant additive functors on $\add G$. Evaluation at $G$, with precomposition as the right action, identifies the finite-dimensional functors vanishing on projectives with right $\Lambda$-modules. Put $P_M=\Hom_A(-,M)|_{\add G}$.
+
+For a short exact sequence
+\[
+ \sigma:\quad 0\longrightarrow Y\xrightarrow{i}L\xrightarrow{p}X\longrightarrow0
+\]
+define $D_\sigma=\coker(P_L\to P_X)$. It has the projective resolution
+\begin{equation}\label{eq:resolution}
+ 0\longrightarrow P_Y\longrightarrow P_L\longrightarrow P_X
+ \longrightarrow D_\sigma\longrightarrow0.
+\end{equation}
+Every finite-dimensional right $\Lambda$-module arises in this way. To see this, take a projective presentation $P_L\to P_X\to D\to0$. Yoneda identifies the first map with a morphism $p:L\to X$. Evaluating at $A$ and using $D(A)=0$ shows that $p$ is surjective. Its kernel supplies \eqref{eq:resolution}.
+
+Every finite projective resolution is the direct sum of a minimal resolution and contractible complexes. Here this follows by eliminating an invertible matrix component of a differential until all differentials lie in the radical of $\add G$. Uniqueness follows successively from uniqueness of projective covers. Consequently, there is a unique minimal sequence
+\[
+ \sigma_D:\quad 0\to Y_D\to L_D\to X_D\to0
+\]
+with defect $D$, and every sequence with that defect is uniquely, up to isomorphism, of the form
+\begin{equation}\label{eq:contracts}
+ \sigma_D\oplus(0\to B\xrightarrow{1}B\to0\to0)
+ \oplus(0\to0\to C\xrightarrow{1}C\to0).
+\end{equation}
+Thus its terms are $Y_D\oplus B$, $L_D\oplus B\oplus C$, and $X_D\oplus C$.
+
+For a nonprojective $I_i$ let $S_i=P_{I_i}/\rad(-,I_i)$. For a defect $D$, write
+\[
+ \delta_i(D)=\dim_kD(I_i),\quad
+ t_i(D)=[\topm D:S_i],\quad s_i(D)=[\soc D:S_i].
+\]
+The brackets denote multiplicity in a semisimple functor. At projective labels all three numbers are zero. After extension to $E$, the dimension is taken over $E$ and the labels are $(I_i)_E$ and $(S_i)_E$. In particular, $\delta_i$ is divisible by $d_i$. Define
+\[
+ X(t)=\bigoplus_{I_i\text{ nonprojective}}I_i^{t_i},\qquad
+ Y(s)=\bigoplus_{I_i\text{ nonprojective}}(\tau I_i)^{s_i}.
+\]
+Here $\tau$ denotes the Auslander--Reiten translation from the projective stable category to the injective stable category, and its values are taken without injective summands.
+
+\begin{lemma}\label{lem:ends}
+For every defect $D$, one has $X_D\simeq X(t(D))$ and $Y_D\simeq Y(s(D))$.
+\end{lemma}
+\begin{proof}
+The epimorphism $P_{X_D}\to D$ in the minimal resolution is a projective cover, proving the first assertion. Define the covariant defect
+\[
+ D'_\sigma=\coker\bigl(\Hom_A(L,-)\to\Hom_A(Y,-)\bigr).
+\]
+Auslander's defect formula gives natural isomorphisms
+$D'_\sigma(\tau I)\simeq\Hom_k(D_\sigma(I),k)$; see \cite[Proposition 2.5]{Jiao}. One can obtain them by writing $D_\sigma(I)$ as the cokernel of the corresponding stable Hom map, dualizing, and applying Auslander--Reiten duality to the resulting kernel.
+
+The covariant representable resolution associated with a minimal sequence is minimal: both maps remain in the radical. Thus $\Hom_A(Y_D,-)\to D'_\sigma$ is its projective cover. The translation equivalence preserves the radical and the residue division fields, while $k$-duality interchanges socle and top. The multiplicity of $\tau I_i$ in $Y_D$ is therefore $s_i(D)$. Injective summands of $Y_D$ would split off contractible summands, and hence do not occur.
+\end{proof}
+
+Let $H=(h(I_i,I_j))_{i,j=1}^m$. We identify the split Grothendieck group with $\ZZ^m$ by the classes of the $I_i$. The matrix $H$ is invertible over $\QQ$. For a nonprojective $I_j$, let $E_j$ be the middle term of its almost split sequence. Applying $\Hom_A(I_i,-)$ shows that the column
+$[\tau I_j]+[I_j]-[E_j]$ is sent by $H$ to $d_j$ times the $j$th unit vector. For projective $I_j$, use $[I_j]-[\rad I_j]$ instead: every nonisomorphism from an indecomposable to $I_j$ has image in its unique maximal submodule. Let $C$ be the matrix with these columns. Then $HC=\operatorname{diag}(d_1,\ldots,d_m)$.
+
+For a sequence with terms $X,Y,L$ it follows that
+\begin{equation}\label{eq:defdim}
+ \delta_i=h(I_i,Y)+h(I_i,X)-h(I_i,L),
+\end{equation}
+and, for a minimal sequence of defect data $\delta,t,s$,
+\begin{equation}\label{eq:middleterm}
+ [L_D]=[X(t)]+[Y(s)]-H^{-1}\delta.
+\end{equation}
+In particular the minimal middle term is determined by those data.
+
+\subsection{Stabilizers and the mass formula}
+
+\begin{lemma}\label{lem:stabilizer}
+If the contractible terms of $\sigma$ are $B,C$, then over a field of order $Q$,
+\begin{equation}\label{eq:autseq}
+ |\Aut(\sigma)|=
+ Q^{h(L,Y)+h(X,L)-h(X,Y)-e(B)-e(C)}|\Aut(D_\sigma)|a_B(Q)a_C(Q).
+\end{equation}
+\end{lemma}
+\begin{proof}
+There is an exact sequence of vector spaces
+\begin{align*}
+0\to\Hom(X,Y)&\longrightarrow\Hom(L,Y)\oplus\Hom(X,L)\\
+&\longrightarrow\End(\sigma)\longrightarrow\End(D_\sigma)\to0,
+\end{align*}
+where the first two maps are $u\mapsto(up,-iu)$ and
+$(s,t)\mapsto(si,is+tp,pt)$. The last map is onto by lifting along the projective resolution \eqref{eq:resolution}. If a chain map induces zero on the defect, its component on $X$ lifts to $pt$ for a map $t:X\to L$. Its middle component minus $tp$ factors through $i$, giving $is$, and the chain condition gives the component $si$ on $Y$. Finally, $si=pt=is+tp=0$ implies $s=up$ and $t=-iu$. This proves exactness and
+\[
+ \dim\End(\sigma)=\dim\End(D_\sigma)+h(L,Y)+h(X,L)-h(X,Y).
+\]
+For a minimal resolution, every null-homotopic chain endomorphism has radical components. If $f$ is such an endomorphism and $g$ is arbitrary, $1-gf$ is invertible in every degree and its inverses form a chain map. Hence the kernel of $\End(\sigma_D)\to\End(D)$ lies in the Jacobson radical and the semisimple quotients agree.
+
+The category of these finite complexes is Krull--Schmidt. Its minimal indecomposable summands correspond to the indecomposable summands of $D$. Neither type of nonzero contractible summand is isomorphic to a minimal summand or to the other contractible type. Therefore the semisimple quotient of $\End(\sigma)$ is the product of those of $\End(D)$, $\End(B)$, and $\End(C)$. Applying
+\[
+ |R^\times|=Q^{\dim R-\dim(R/\rad R)}|(R/\rad R)^\times|
+\]
+to these four endomorphism algebras proves \eqref{eq:autseq}.
+\end{proof}
+
+Define the mass, over the current extension field, by
+\[
+ \mathfrak M_{\delta,t,s}(E)=
+ \sum_{\substack{[D]\in\operatorname{mod}\Lambda_E\\
+ \delta(D)=\delta,\ t(D)=t,\ s(D)=s}}
+ \frac1{|\Aut(D)|}.
+\]
+For fixed dimension this is a finite sum. No representation-finiteness assumption on $\Lambda$ is needed. The mass of the zero module is one. Incompatible data have mass zero.
+
+\begin{proposition}\label{prop:mass}
+Fix $X,Y,L$ and let $\delta$ be given by \eqref{eq:defdim}. If $B_s=Y\ominus Y(s)$ and $C_t=X\ominus X(t)$ denote existing direct-sum complements, then
+\begin{equation}\label{eq:mass}
+ F^L_{X,Y}(E)=a_L(Q)Q^{h(X,Y)-h(L,Y)-h(X,L)}
+ \sum_{t,s}\frac{Q^{e(B_s)+e(C_t)}}{a_{B_s}(Q)a_{C_t}(Q)}
+ \mathfrak M_{\delta,t,s}(E).
+\end{equation}
+The sum ranges over precisely the pairs for which both complements exist.
+\end{proposition}
+\begin{proof}
+The group $\Aut(L_E)$ acts on the submodules counted by the left-hand side. The stabilizer of a submodule is the automorphism group of its short exact sequence, since the maps induced on the submodule and quotient are uniquely determined. For a fixed defect $D$, decomposition \eqref{eq:contracts} shows that every nonempty layer is one orbit. Its complements are determined by the endpoints. Equation~\eqref{eq:middleterm}, together with \eqref{eq:defdim}, then gives the required middle term. Apply \eqref{eq:autseq} and sum the orbit sizes.
+\end{proof}
+
+\begin{corollary}\label{cor:criterion}
+If every mass $\mathfrak M_{\delta,t,s}$ is given by an element of $\R$ on all conservative extensions, then $A$ has Hall polynomials.
+\end{corollary}
+\begin{proof}
+Every sum in \eqref{eq:mass} is finite, and all its other factors belong to $\R$. The result takes integer values on the unbounded set of conservative field sizes. Apply Lemma~\ref{lem:integer}.
+\end{proof}
+
+The mass transformation is reversible. For fixed $\delta,t,s$, form the vector in \eqref{eq:middleterm}. If it is not a nonnegative integral vector, the mass is zero. Otherwise let $L_0$ be the corresponding module and apply \eqref{eq:mass} to $X(t),Y(s),L_0$. After multiplication by $Q^{h(L_0,Y(s))+h(X(t),L_0)-h(X(t),Y(s))}/a_{L_0}(Q)$, the coefficient of $\mathfrak M_{\delta,t,s}$ is one, and all other terms have smaller $\sum_i(t_i+s_i)$. This also proves the converse of Corollary~\ref{cor:criterion}.
