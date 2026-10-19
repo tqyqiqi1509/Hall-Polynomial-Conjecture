@@ -1,0 +1,3 @@
+*.tex -text
+/main.pdf -text
+/SHA256.json -text
