@@ -1,0 +1,102 @@
+\section{Nodes and the general case}\label{sec:global}
+\subsection{Quotients and finite-field forms of the attachments}
+\begin{lemma}\label{lem:attachment-quotients}
+Every finite-field form of a representation-finite quotient of one of the three geometric nonstandard attachments has Hall polynomials.
+\end{lemma}
+\begin{proof}
+First work over an algebraic closure with one maximal attachment $B$ and a two-sided ideal $K$. Put $j=qrp$. If both $r^3$ and $j$ survive in $B/K$, then $K$ has zero intersection with every corner on $x,y$. In the root corner $k[r]/(r^4)$, every nonzero ideal contains $r^3$. For a nonzero $(a+br)p$, multiplication by $q$ gives $ar^2+(a+b)r^3$; if $a\ne0$, multiply once more by $r$, and otherwise the result is already a nonzero multiple of $r^3$. The corner spanned by $q,qr$ is treated by left multiplication by $p$. Finally, the corner spanned by $e_y,j$ is $k[j]/(j^2)$, and every nonzero ideal there contains $j$.
+
+Every ideal is the direct sum of its intersections with the Peirce corners $e_uBe_v$. The remaining nonidentity corners have bases
+\[
+\begin{array}{c|l}
+ a&\beta, q\beta\\
+ b&\gamma, p\gamma\\
+ c&\beta, \gamma.
+\end{array}
+\]
+Each listed path lies in a different one-dimensional corner. Killing $\beta$ kills $q\beta$, and killing $\gamma$ kills $p\gamma$. Thus the connected quotients retaining both critical paths are precisely the three maximal models, type $a$ with $q\beta=0$, type $b$ with $p\gamma=0$, and their arrow deletions. Deleting an outside vertex gives the same connected component, with possible isolated simple components. Deleting $\beta$ from type $c$ gives the smaller type $b$; deleting $\gamma$ gives the smaller type $a$. With no outside arrow one obtains an isolated penny.
+
+If $r^3\in K$, the circle relation is already standard. If $j\in K$, the change $p'=(1+r)p$ makes it standard and preserves all outside relations. In either case $B/K$ is a quotient of the corresponding standard model $B_0$. It is ray-standard: in every Peirce corner of $B_0$, subbimodules are exactly spans of terminal segments of the path-ray basis. Explicitly the root corner has ideals $(r^i)$, the $y$-corner has ideals $0,kj,k[j]/(j^2)$, the two arrow corners are length-two single Jordan chains under multiplication by $r$, and outside nonidentity corners are one-dimensional. Hence an ideal is spanned by a subset of ray basis vectors. The subset is an ideal of the ray category, and \cite[Proposition 2(c)]{Bongartz13} identifies the quotient ray category with that of the quotient algebra. Its linearization is the given quotient. Lemma~\ref{lem:ray-mesh} and Theorem~\ref{thm:standard} apply to every finite-field form of these representation-finite quotients.
+
+It remains to determine the forms of the connected models retaining $r^3,j$. Their automorphisms fixing all vertex idempotents are exactly
+\begin{align*}
+ r&\longmapsto r+vr^2+wr^3,\\
+ p&\longmapsto\alpha(p+trp),&
+ q&\longmapsto\alpha^{-1}(q+tqr),\\
+ \beta&\longmapsto\eta\beta,&
+ \gamma&\longmapsto\theta\gamma,
+\end{align*}
+where only the existing outside arrows are included, $v,w,t$ are arbitrary, and $\alpha,\eta,\theta$ are nonzero. To prove necessity, first allow root coefficient $u$ and distinct correction coefficients in $p,q$. The relation $qp=0$ and $j\ne0$ force the latter to agree. Comparing the quadratic and cubic terms of $pq=r^2+r^3$ then gives $u^2=u^3=\alpha_1\alpha_2$, hence $u=1$ and $\alpha_2=\alpha_1^{-1}$. The corner bases force the other displayed terms. For sufficiency, the two $t j$ terms in $qp$ cancel, as do the two $tr^3$ terms in $pq$. The relations $r\beta=0$ and $rp\gamma=0$ are preserved by $r^2p=0$. Where required, $q\beta=0$ is preserved since $qr\beta=0$, and $p\gamma=0$ is preserved since $rp\gamma=0$. The induced map on arrows modulo their square is invertible, so Nakayama's lemma makes this an automorphism.
+
+For $s$ outside arrows this fixed-idempotent group has underlying variety $(\mathbb G_m)^{1+s}\times\mathbb A^3$ and is connected. The loop fixes $x$, the two-cycle fixes $y$, and the sources of the outside arrows distinguish the sinks; there is no vertex permutation. Every complete lifted idempotent set is conjugate to the given one by $1+\rad B$. Thus the full reduced automorphism group is connected as the image of the product of this connected group and $1+\rad B$. Over a perfect field it is smooth. Lang's theorem \cite{Lang} makes its first Galois cohomology trivial. Since each model has a presentation over $\FF_2$, every geometrically connected finite-field form is the displayed split model. Corollary~\ref{cor:attachments} and Proposition~\ref{prop:actual-standardization} apply. In particular the two smaller models are treated over their own conservative extensions.
+
+A finite-field form can permute several geometric connected components. Its reduction to a geometrically connected algebra over a central field, and the corresponding change of variable in its Hall polynomials, is given in Lemma~\ref{lem:central-field} below.
+\end{proof}
+
+\subsection{Node splitting}
+A split vertex $x$ is a \emph{node} here if it has no loop and every product of an incoming arrow with an outgoing arrow is zero. Replace it by a receiving vertex $x^-$ and an emitting vertex $x^+$, retaining the incoming and outgoing arrows respectively. This defines the node-splitting algebra $A^{\rm s}$. For a module $M$, let $R_x(M)$ be the sum of all incoming-arrow images at $x$. Outgoing arrows kill this subspace. Define $\mathcal F(M)$ on the two new vertices by
+\[
+ \mathcal F(M)_{x^-}=R_x(M),\qquad
+ \mathcal F(M)_{x^+}=M_x/R_x(M),
+\]
+and retain all other spaces and induced arrow maps. Write $S_x,S_-,S_+$ for the simple modules at the old and two new vertices.
+
+\begin{lemma}\label{lem:node-hall}
+Suppose $A$ is representation-finite. Then $A^{\rm s}$ is representation-finite with $D_A=D_{A^{\rm s}}$. If $A^{\rm s}$ has Hall polynomials, so does $A$.
+\end{lemma}
+\begin{proof}
+Fix $M$ and a submodule $U$. Define a submodule $U'\subseteq\mathcal F(M)$ using the same spaces away from the node and
+\[
+ U'_- =U_x\cap R_x(M),\qquad
+ U'_+=(U_x+R_x(M))/R_x(M).
+\]
+For a fixed $U'$, the choices of $U_x$ are graphs of maps
+$U'_+\to R_x(M)/U'_-$, after choosing a vector-space splitting. Every graph satisfies the arrow conditions, because all outgoing arrows kill $R_x(M)$. Its isomorphism type and its quotient's isomorphism type are independent of the graph: a shear from the emitting complement to $R_x(M)$ is an automorphism of the ambient representation. The quotient's receiving space is generated by its incoming images and is exactly $R_x(M/U)$. Thus $\mathcal F(M)/U'\simeq\mathcal F(M/U)$.
+
+Write $Y=Y_0\oplus S_x^m$, where $Y_0$ has no $S_x$ summand, and set
+$Y'_a=\mathcal F(Y_0)\oplus S_+^a\oplus S_-^{m-a}$ for $0\le a\le m$. These are precisely the split-node types that merge to $Y$. To see this, split off the receiving space not generated by incoming arrows, which is a sum of $S_-$, and split off the emitting kernel of all outgoing arrows, which is a sum of $S_+$. The remaining merged module has no node-simple summand. Consequently the graph count gives
+\begin{equation}\label{eq:node-formula}
+ F_A^M(X,Y)=\sum_{a=0}^m
+ Q^{\dim(Y'_a)_{x^+}\,\dim\mathcal F(X)_{x^-}}
+ F_{A^{\rm s}}^{\mathcal F(M)}(\mathcal F(X),Y'_a),
+ \qquad Q=|k|.
+\end{equation}
+
+Merging the two spaces takes any split-node module with no $S_-$ summand back to an $A$-module, inverse on isomorphism classes to $\mathcal F$. Indeed, absence of an $S_-$ summand says precisely that incoming images generate its receiving space. For each $M$, the natural map
+$\End_A(M)\to\End_{A^{\rm s}}(\mathcal F(M))$ is surjective: lift the two diagonal maps using a splitting of $M_x$. Its kernel is $\Hom_k(M_x/R_x(M),R_x(M))$ and has square zero. Hence it preserves localness and residue fields. The indecomposables correspond, with one additional simple $S_-$ of the same residue degree as $S_x$. This proves representation-finiteness and equality of conservative periods. Formula~\eqref{eq:node-formula} is therefore a finite sum of integer polynomials on all conservative extensions.
+\end{proof}
+
+The same construction works at an actual primitive idempotent $e$ with $eAe=D$ a finite field. Put $f=1-e$ and suppose $(fAe)(eAf)=0$. The other cross product is also zero: it lies in $e\rad A e=0$. Split $D$ into a receiving and an emitting copy, retaining the two off-diagonal bimodules and $fAf$. All node spaces, splittings and graph maps in the proof are then $D$-linear. The exponent in \eqref{eq:node-formula} becomes
+\begin{equation}\label{eq:node-degree}
+ [D:k]\,\dim_D(Y'_ae_+)\,\dim_D(\mathcal F(X)e_-).
+\end{equation}
+The square-zero-kernel argument uses the corresponding $D$-linear Hom space and still preserves residue fields. On every conservative extension $E/k$, $D\otimes_kE$ is a field of order $|E|^{[D:k]}$, so the identical formula holds.
+
+\subsection{Central fields and the structural reduction}
+\begin{lemma}\label{lem:central-field}
+Let a connected finite-field algebra have a Frobenius orbit of $d$ geometric connected components. It is the restriction of a geometrically connected algebra over a central field $k'/k$ of degree $d$. A Hall polynomial $f(T)$ for the latter gives $f(T^d)$ over $k$, on all conservative extensions.
+\end{lemma}
+\begin{proof}
+The centre is a commutative local Artin algebra whose residue field is $k'=\FF_{q^d}$. Lifting the roots of the separable polynomial $X^{q^d}-X$ embeds $k'$ in the centre. With this central scalar structure the algebra is geometrically connected over $k'$, and its restriction is the original algebra. The field $k'$ embeds in every nonzero indecomposable endomorphism residue field: a nonzero central scalar is invertible and cannot lie in its radical. Thus $d$ divides every such residue degree. If $[E:k]=r$ is conservative, then $\gcd(r,d)=1$, so $E'=k'\otimes_kE$ is a field of order $|E|^d$. The residue degrees over $k'$ are the degrees over $k$ divided by $d$; therefore $E'/k'$ is conservative as well. Modules, morphisms and submodules carry the same central action on both descriptions. The Hall count is $f(|E|^d)$, proving the assertion.
+\end{proof}
+
+Over an algebraically closed field, a representation-finite basic algebra is distributive and has a representation-finite, hence mild, ray category \cite[Theorems 2 and 4]{Bongartz13}. In characteristic two, Theorem 10 of that reference describes it by standard or nonstandard choices at pennies, leaving all other products unchanged. Distinct essential non-deep contours have disjoint vertex sets by its Theorem 6(b). The full penny subcategory and its path data are those of Section~\ref{sec:boundary}. If the root has nonzero Hom to an outside vertex, Theorem 8 gives a two-vertex penny and exactly one of the three attachments in Section~\ref{sec:attachments}. Its listed outside arrows are the only arrows joining the penny to its complement. Each outside receiving point has no other incoming arrow, and every subsequent outgoing arrow composes to zero. The dual statement holds when Hom from an outside vertex to the root is nonzero. Splitting these receiving or emitting nodes isolates the attachment, as in \cite[\S3.8]{Bongartz13}.
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Morita equivalence preserves exact sequences, subobjects, endomorphism rings and scalar extension, so take $A$ basic. Its geometric extension is also basic, because the semisimple quotient is a product of finite separable fields. It is representation-finite: each geometric indecomposable is defined over a finite extension and is a summand of the scalar extension of its restriction. It is therefore a summand of the geometric extension of one of the finitely many indecomposable $A$-modules.
+
+In odd characteristic the standard-form theorem \cite[Theorem 3]{Bongartz13} makes $A_{\bar k}$ ray-standard. Lemma~\ref{lem:ray-mesh} and Theorem~\ref{thm:standard} give the result. Assume henceforth characteristic two.
+
+The active penny set is Frobenius-stable by the normalization calculation in Proposition~\ref{prop:actual-standardization}, which applies to each full penny subcategory. First select all outside receiving nodes supplied by Theorem 8 for active pennies with nonzero outgoing root Hom. This set is Frobenius-stable. None of its vertices lies in another penny, since the latter's internal incoming arrow would contradict the unique incoming arrow at that receiving node. There is no oriented path between two selected receiving nodes: the last arrow would come from the target's penny, but that penny has no outside incoming arrow. The same argument excludes a return path to a selected node. Hence each entire Frobenius orbit of these vertices has an actual primitive corner equal to a finite field, with no radical. Its node relations descend faithfully. The actual-field construction following Lemma~\ref{lem:node-hall} applies to each orbit.
+
+Split these orbits, then apply the dual construction to the remaining outside emitting nodes. The dual no-path argument again supplies field corners. These operations terminate on the finite set of indicated nodes. The geometric connected components of the result are root-isolated components, quotients of the three attachments or their opposites, and ray-standard components. This follows from the complete list of incident arrows in Theorem 8: splitting separates each nonisolated penny from the rest, while every remaining active root has zero Hom in both directions to outside vertices.
+
+For an actual connected block, apply Lemma~\ref{lem:central-field} to work over its central finite field with geometrically connected extension. In a root-isolated block, Propositions~\ref{prop:actual-standardization} and \ref{prop:isolated-comparison} give Hall polynomials. The attachment quotients are covered by Lemma~\ref{lem:attachment-quotients}, which treats every retained critical-path quotient over its own conservative extensions. The ray-standard blocks are covered by Lemma~\ref{lem:ray-mesh} and Theorem~\ref{thm:standard}.
+
+For an opposite algebra, finite-dimensional duality gives
+\[
+ F_A^M(X,Y)=F_{A^{\rm op}}^{D_kM}(D_kY,D_kX).
+\]
+It preserves residue-field degrees and commutes with finite scalar extension, so the same conclusion holds for the opposite blocks. Central restriction replaces $f(T)$ by $f(T^d)$, and independent blocks multiply their Hall polynomials. Finally apply \eqref{eq:node-formula} with \eqref{eq:node-degree} in reverse order to glue the nodes. Each step is a finite sum of integer polynomials multiplied by nonnegative powers of $T$, with the same conservative period. This gives \eqref{eq:hall} for the original fixed modules over every conservative extension. Returning along the Morita equivalence completes the proof.
+\end{proof}
+

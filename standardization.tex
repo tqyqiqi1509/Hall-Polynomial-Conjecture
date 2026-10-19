@@ -1,0 +1,72 @@
+\section{Standardization over the finite field}\label{sec:standardization}
+Let $A$ be a basic representation-finite algebra over a finite field $k$ of characteristic two. In its geometric extension, select all nonstandard pennies with isolated roots. A penny is called \emph{active} when its choice in the mixed ray/stem classification is nonstandard and the critical path $a_nra_1$ is nonzero. The mixed classification and the disjointness of the supports are \cite[Theorems 6 and 10]{Bongartz13}. In this section all active roots are assumed isolated.
+
+\begin{proposition}\label{prop:actual-standardization}
+There is a representation-finite geometrically standard $k$-algebra $A^0$ with the common quotient and boundary data of Proposition~\ref{prop:isolated-comparison}.
+\end{proposition}
+\begin{proof}
+We construct the algebra over $k$. First consider an isomorphism, possibly semilinear, between two normalized active geometric pennies. Its root and end-arrow coordinates have the form
+\[
+ r\longmapsto ur+vr^2+wr^3,\qquad
+ a_1\longmapsto\alpha(a_1+tra_1),\qquad
+ a_n\longmapsto\gamma(a_n+sa_nr),
+\]
+with $u,\alpha,\gamma\ne0$. The zero turn and the nonzero critical path imply $s=t$. Higher terms in an internal arm arrow contribute zero to the completed root circle: an internal detour traverses an additional root circuit, whose completed product contains
+$(r^2+r^3)r^j(r^2+r^3)=0$, and an outside detour is killed by root isolation. Thus the image of the arm circle is $c(r^2+r^3)$, where $c$ is the product of the leading arrow coefficients. The two end corrections cancel in characteristic two. The root side of the relation maps to $u^2r^2+u^3r^3$, whence
+\begin{equation}\label{eq:root-normalization}
+ c=u^2=u^3,\qquad u=1.
+\end{equation}
+The same calculation precludes an isomorphism from an active penny to a standard penny: the image of the latter's arm circle has no cubic term, whereas the image of $r^2+r^3$ has nonzero cubic coefficient. Essential penny supports are intrinsic in the ray category. Frobenius therefore preserves the active set.
+
+Let $J$ be the sum of the selected projective-injective socles, descended to $k$, and put $C=A/J$. On a geometric selected root set $R=\rad P$, $T=P/\soc P$, and let $h:R\to T$ be the natural map. Define $\delta:R\to T$ by
+\[
+ \delta(r)=r^2,\qquad \delta(r^2)=\delta(r^3)=0,
+ \qquad \delta|_{R_j}=0\quad(1\le j<n).
+\]
+The relations $r^2p_j=q_ir^2=0$ make it $C$-linear. A semisimple complement to $\rad A$ supplies, after extension, Frobenius-permuted primitive idempotents. Equation~\eqref{eq:root-normalization} shows that Frobenius sends $r$ to $r'+vr'^2+wr'^3$ and $r^2$ to $r'^2$. Consequently $F_T\delta=\delta F_R$, including the zero arm components. For each actual selected projective-injective $P_s$, the orbit sum descends to
+\[
+ \delta_s:R_s\to T_s,\qquad R_s=\rad P_s,\quad T_s=P_s/\soc P_s.
+\]
+Put $h_s^0=h_s+\delta_s$. In geometric coordinates \eqref{eq:radical-identification} identifies this map with the standard boundary.
+
+Every indecomposable other than a selected $P_s$ is a $C$-module by the essential-socle argument in Proposition~\ref{prop:isolated-comparison}. For any such module $X$,
+\begin{equation}\label{eq:boundary-homs}
+ \Hom_A(P_s,X)=\Hom_C(T_s,X),\qquad
+ \Hom_A(X,P_s)=\Hom_C(X,R_s).
+\end{equation}
+If $a_s:R_s\hookrightarrow P_s$ and $b_s:P_s\twoheadrightarrow T_s$ are the natural maps, every radical endomorphism of $P_s$ is uniquely $a_sfb_s$ for $f:T_s\to R_s$, and $b_sa_s=h_s$. The endomorphism ring of $P_s$ is commutative, since its geometric extension is a product of the root corners $\bar k[r]/(r^4)$. Its residue field $D_s$ has a unique coefficient-field lift: lift the roots of $X^{|D_s|}-X$, whose derivative is $-1$. Write $c_R,c_T$ for the actions of $c\in D_s$ on $R_s,T_s$. After geometric extension these are scalar actions on the individual root summands. Thus $\delta_s$ and $h_s^0$ commute with them.
+
+Retain the entire $C$-module category and add objects $P_s^0$ with
+\begin{align*}
+ \Hom(P_s^0,X)&=\Hom_C(T_s,X),&
+ \Hom(X,P_s^0)&=\Hom_C(X,R_s),\\
+ \End(P_s^0)&=D_s\oplus\Hom_C(T_s,R_s).
+\end{align*}
+On the last space define
+\begin{equation}\label{eq:new-corner}
+ (c,f)(d,g)=(cd,\ c_Rg+fd_T+fh_s^0g).
+\end{equation}
+If $u:X\to R_s$ and $v:T_s\to Y$ represent maps through $P_s^0$, their composite is $vh_s^0u$. For the opposite order, $u:X\to R_s$ and $v:T_s\to X$ compose to $(0,uv)$. The actions on the adjacent Hom spaces are
+\[
+ v(c,f)=vc_T+vh_s^0f,\qquad (c,f)u=c_Ru+fh_s^0u.
+\]
+For distinct selected roots the Hom space between $P_s^0,P_t^0$ is zero. Indeed, $\Hom_C(T_s,R_t)=0$ geometrically, because the root of $T_s$ is outside the support of $R_t$, and hence also over $k$. These formulas are associative: expansion reduces every product to ordinary composition and the equalities $c_Th_s^0=h_s^0c_R$; composites between different roots vanish by the same Hom equality. With $h_s$ in place of $h_s^0$, \eqref{eq:boundary-homs} recovers the original additive category.
+
+Take the sum $W^0$ of the new $P_s^0$ and all nonselected projectives $e_jC=e_jA$, and define $A^0=\End(W^0)$ with composition multiplication. The convention is appropriate for right modules, since $\End_A(A_A)=A$. This is a finite-dimensional algebra over $k$. Geometrically, the formulas are exactly the radical and socle-quotient description of the algebra obtained by changing the selected mixed choices to their standard choices.
+
+One can verify the root relation directly. Let $f_v:T\to R$ denote the map determined by $f_v(1)=v$, and set $z=(0,f_r)$ in the new root corner. Then
+\[
+ z^2=(0,f_{r^2+r^3}),\qquad z^3=(0,f_{r^3}).
+\]
+The unchanged arm circle represents $(0,f_{r^2+r^3})$, so it equals $z^2$. Its common quotient sends $z$ to $r+r^2$. The standard loop $z+z^2+z^3$ maps to $r$ and has the same square and cube as $z$; its extra terms vanish on adjacent arm arrows. In the retained radical, its first three powers have coordinates $r+r^2,r^2+r^3,r^3$, precisely \eqref{eq:radical-identification}. The mixed classification therefore identifies $A^0_{\bar k}$ with the ray-standard form. It is representation-finite by \cite[Theorem 4]{Bongartz13}, and mesh-standard by Lemma~\ref{lem:ray-mesh}.
+
+The common quotient is also defined over $k$. Send $P_s^0$ to $T_s$, fix retained $C$-objects, and on morphisms send
+\[
+ (c,f)\longmapsto c_T+h_s^0f,\qquad
+ u:X\to R_s\longmapsto h_s^0u,
+ \qquad v:T_s\to X\longmapsto v.
+\]
+The composition formulas show that this is a functor. On $W^0$ it gives $A^0\to\End_C(C_C)=C$. Geometrically it is surjective and kills exactly the selected socles; faithful scalar extension proves both assertions over $k$. The retained $R_s,T_s,h_s^0$ are consequently the actual boundary data.
+
+Finally, geometric representation-finiteness implies representation-finiteness over $k$. Choose a finite extension $L/k$ defining all geometric indecomposables. Modules over a finite field that become isomorphic after further extension are already isomorphic: restriction gives isomorphic repeated direct sums, and Krull--Schmidt cancels their multiplicities. Thus every $M_L$ is a sum of the finitely many chosen $L$-modules. Since $M$ is a summand of the restriction of $M_L$, each indecomposable $M$ is a summand of one of their restrictions. There are only finitely many possibilities. This completes the construction.
+\end{proof}

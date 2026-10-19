@@ -34,7 +34,7 @@
 \newcommand{\NN}{\mathbb N}
 \newcommand{\R}{\mathcal R}
 \newcommand{\gauss}[3]{\genfrac{[}{]}{0pt}{}{#1}{#2}_{#3}}
-\title{Hall polynomials for geometrically standard algebras}
+\title{Hall polynomials for representation-finite algebras}
 \author{Qiyue Tang}
 \date{}
 \begin{document}
@@ -43,13 +43,13 @@
 \footnotetext{2020 Mathematics Subject Classification. Primary 16G60; Secondary 16G20, 16G70.\newline Key words and phrases. Hall polynomial, representation-finite algebra, Auslander defect, mesh category, finite field.}
 \endgroup
 \begin{abstract}
-We prove the existence of integral Hall polynomials for geometrically standard representation-finite algebras over finite fields. In particular, Hall polynomials exist for every representation-finite algebra over a finite field of odd characteristic. The proof expresses Hall numbers through defect modules with prescribed top and socle and computes their automorphism-weighted masses on modulated mesh categories. A Fourier calculation reduces these masses to total masses on periodic Dynkin components; square boundaries are counted by Hall flags of nilpotent semilinear cycles.
+We prove that every representation-finite algebra over a finite field has Hall polynomials with integer coefficients. The polynomials count submodules with fixed submodule, quotient and middle-module isomorphism types over every conservative finite extension.
 \end{abstract}
 
 \section{Introduction}
-Let $k=\FF_q$ and let $A$ be a finite-dimensional $k$-algebra of finite representation type. For finite-dimensional right $A$-modules $X,Y,L$ and a finite extension $E/k$, put $M_E=M\otimes_kE$ and define
+Let $k=\FF_q$ and let $A$ be a finite-dimensional $k$-algebra of finite representation type. For a finite-dimensional right $A$-module $M$ and a finite extension $E/k$, write $M_E=M\otimes_kE$. For such modules $X,Y,L$, define
 \[
- F^L_{X,Y}(E)=\#\{U\subseteq L_E:U\simeq Y_E,\ L_E/U\simeq X_E\}.
+F^L_{X,Y}(E)=\#\{U\subseteq L_E:U\simeq Y_E,\ L_E/U\simeq X_E\}.
 \]
 The first lower index is the quotient and the second is the submodule. A finite extension is \emph{conservative for $A$} if every indecomposable $A$-module remains indecomposable after scalar extension. We say that $A$ has Hall polynomials if, for every $X,Y,L$, there is a polynomial $\varphi^L_{X,Y}\in\ZZ[T]$ such that
 \begin{equation}\label{eq:hall}
@@ -58,27 +58,31 @@ The first lower index is the quotient and the second is the submodule. A finite 
 \end{equation}
 Hall polynomials for representation-finite hereditary algebras were established by Ringel \cite{Ringel}. Hall polynomials for nilpotent cyclic-quiver representations provide another basic counting input; see \cite[Theorem 16]{Hubery}.
 
-A representation-finite algebra over an algebraically closed field is \emph{mesh-standard} if its category of indecomposable modules is equivalent, with its object labels, to the mesh category of its Auslander--Reiten quiver. We call $A$ \emph{geometrically standard} if $A_{\bar k}$ is mesh-standard. Mesh categories and their finite-field modulation are described in Section~\ref{sec:structure}.
-
 \begin{theorem}\label{thm:main}
+Every representation-finite algebra over a finite field has Hall polynomials.
+\end{theorem}
+
+The proof first treats geometrically standard algebras. A representation-finite algebra over an algebraically closed field is \emph{mesh-standard} if its category of indecomposable modules is equivalent, with its object labels, to the mesh category of its Auslander--Reiten quiver. We call $A$ \emph{geometrically standard} if $A_{\bar k}$ is mesh-standard, where $\bar k$ is an algebraic closure of $k$. The mesh relations come from almost split sequences; their finite-field modulation is described in Section~\ref{sec:structure}.
+
+\begin{theorem}\label{thm:standard}
 Every geometrically standard representation-finite algebra over a finite field has Hall polynomials.
 \end{theorem}
 
-\begin{corollary}\label{cor:odd}
-Every representation-finite algebra over a finite field of characteristic different from two has Hall polynomials.
-\end{corollary}
+For Theorem~\ref{thm:standard}, the contravariant defect of a short exact sequence determines its minimal endpoints and middle term through its dimension vector, top and socle. An orbit formula expresses Hall numbers through the masses of these defects. We compute the masses on the stable Auslander algebra by completing finite translation intervals, decomposing local data into strings and bands, and evaluating the quadratic character sums. Total masses on periodic Dynkin components determine the remaining band contribution.
 
-The structural implication used in this corollary follows from the standard-form theorems reviewed in \cite{Bongartz13}; its passage from the projective points to the complete mesh category is given in Section~\ref{sec:structure}.
-
-The counting argument uses the contravariant defect of a short exact sequence. Its dimension vector determines the alternating sum of the three terms; its top and socle determine the minimal quotient and submodule. This yields an explicit orbit formula for a fixed Hall number. The remaining calculation concerns modules over the stable Auslander algebra, which is a finite modulated partial mesh algebra. We complete its translation intervals to finite cycles, decompose the local linear data into strings and bands, and integrate the quadratic boundary terms. The pure-band contribution is recovered from independently computed total masses on the original periodic components.
+The standard-form classification \cite{Bongartz13} reduces the additional characteristic-two cases to penny configurations. Their radical-to-socle-quotient maps differ by a root shear. For each graph map into a quotient module, we extend that shear modulo maps through projectives; pullback by a target automorphism then permutes extension classes while preserving the required middle-module labels. At isolated roots this gives all Hall numbers of the standard form. The three possible root attachments have two exceptional indecomposables; matrix-rank counts and the recursions in Section~\ref{sec:attachments} determine their remaining Hall coefficients. Section~\ref{sec:global} completes the proof over the original finite field by node splitting and central restriction of scalars.
 
 \paragraph{Use of generative AI.}
-ChatGPT and Codex were used to develop mathematical arguments, perform computational checks, and draft and revise the manuscript.
+ChatGPT and Codex were used to develop mathematical arguments, perform computational checks, and draft and revise the manuscript. The characteristic-two arguments were developed and cross-checked with Codex agents and revised with Codex.
 
 \input{defects}
 \input{cycles}
 \input{mesh_counting}
 \input{structure}
+\input{penny_comparison}
+\input{standardization}
+\input{attachments}
+\input{global_reduction}
 \input{references}
 \medskip
 \begingroup\small

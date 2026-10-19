@@ -1,0 +1,50 @@
+{
+  "updated_utc": "2026-10-19T09:40:27.758930+00:00",
+  "files": [
+    {
+      "file": "Hall-Polynomial-Conjecture-v2.pdf",
+      "sha256": "506f6b73c6f39aa28b03d66fc0d59322f419e8c0fc33db84eadca876e30bc9ea",
+      "proof": "Hall-Polynomial-Conjecture-v2.pdf.ots",
+      "proof_sha256": "2a289b894ce9c2943ab81fb343d838a145bd29d77a2087ad0e6d76e89142c936",
+      "bitcoin_block_heights": [],
+      "status": "pending_bitcoin_confirmation",
+      "errors": [
+        {
+          "calendar": "https://finney.calendar.eternitywall.com",
+          "upgrade_error": "'Pending confirmation in Bitcoin blockchain'"
+        },
+        {
+          "calendar": "https://bob.btc.calendar.opentimestamps.org",
+          "upgrade_error": "'Pending confirmation in Bitcoin blockchain'"
+        },
+        {
+          "calendar": "https://alice.btc.calendar.opentimestamps.org",
+          "upgrade_error": "'Pending confirmation in Bitcoin blockchain'"
+        }
+      ]
+    },
+    {
+      "file": "Hall-Polynomial-Conjecture-v2-complete.zip",
+      "sha256": "dbed7e6cdbfe681d0636f8faf4bdd25699394a9a0fa81e3284458d25134e1281",
+      "proof": "Hall-Polynomial-Conjecture-v2-complete.zip.ots",
+      "proof_sha256": "acafa1a9b590c6cf3fcae07f486a15abba2423d53415f411ff2cc4b615c17d83",
+      "bitcoin_block_heights": [],
+      "status": "pending_bitcoin_confirmation",
+      "errors": [
+        {
+          "calendar": "https://alice.btc.calendar.opentimestamps.org",
+          "upgrade_error": "'Pending confirmation in Bitcoin blockchain'"
+        },
+        {
+          "calendar": "https://bob.btc.calendar.opentimestamps.org",
+          "upgrade_error": "'Pending confirmation in Bitcoin blockchain'"
+        },
+        {
+          "calendar": "https://finney.calendar.eternitywall.com",
+          "upgrade_error": "'Pending confirmation in Bitcoin blockchain'"
+        }
+      ]
+    }
+  ],
+  "verification": "Proof parsing and original-file SHA-256 checked. A pending calendar attestation is not Bitcoin confirmation."
+}
