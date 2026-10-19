@@ -1,13 +1,13 @@
 {
   "attachments.tex": "78afb4762925b7136d18d826566098ce9b9558657d7782e6528cfabe39c25de3",
-  "cycles.tex": "f60e109c2bf4b25318f52ffbd54139d8ba6df78e7d16ccfa9f45befea3f94400",
-  "defects.tex": "e36f2701269b469e5996767cd3dec79fc694b0b94caa7b79dc003e629646805e",
-  "global_reduction.tex": "c9b9cd2821f2eaccac12447c8bcec1bc697a8dd74bef779c8013dcc6ef569ee1",
+  "cycles.tex": "a6a29d5af077c921ce856736008f7389d52689c1d187563493def9437d0e734e",
+  "defects.tex": "f3ba9eb4247b84c147bb1ba546b63c951399936f7ea1dbfce3f63ad67e779fba",
+  "global_reduction.tex": "2c1e5bee2a69d6747377129cae99775c32ed4fbfa4ab67f6c963571cdbc67674",
+  "main.pdf": "16d96de20c631787e0744d094274d48c46602a69c59cc00cb3c7d6b8c97b54f7",
   "main.tex": "7715e00637a172bd47d72f1fed75bd937f8335950e62afde5ac21a2268d60551",
   "mesh_counting.tex": "2a7331633bd327ac12df4304131569d39cc91b9453c52ba1fe6418c6edb7ad2c",
-  "penny_comparison.tex": "81afc286f4fc26e4fb31bb108bd29705ba910778d6cc515af2f9b161ff4903b4",
+  "penny_comparison.tex": "d1c83690e5eab957a8e5871a2cf4088be95934c4848ba09312bd4f4f31cc3ff0",
   "references.tex": "243e825c4ae7e423e345ba89a9791e341ddc0c4ae2c15d2500d0aacf594e6bc0",
-  "standardization.tex": "f6cf8713ef30e8736b4dd5e3f235b172baadb081bbdb208a5c8a1fa6ae608088",
-  "structure.tex": "213ea13201da626709803b9a218c43090b36d312a0dccb40d10237e91cbc3cee",
-  "main.pdf": "5a52e96ec33aca973c9d1f98d4f02bbe2628f4bbfe7388434bcf5eb09dd93341"
+  "standardization.tex": "42400ca721c75918ddce3ba25c40f694c6a683e330a94f3a3ff81b694736f7ba",
+  "structure.tex": "719045811d718e77e97b520cf3fccb519e35a4000771c6ae6c514ac480b3dc66"
 }

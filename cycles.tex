@@ -86,16 +86,42 @@ Fix the forward-chain representations $M_t$ of $0\to1\to\cdots\to n-1$. They are
 \[
  F_{0,t}=0,\quad F_{j,t}=\ker(M_{0,t}\to M_{j,t})\ (1\le j<n),\quad F_{n,t}=M_{0,t}.
 \]
-Write $f_{j,t}=\dim_KF_{j,t}$. The image of evaluation at zero on $\Hom(M_{t+2},M_t)$ consists exactly of maps preserving these endpoint flags, with the indicated scalar transport. Indeed, an interval starting at zero and ending at $a$ contributes a flag direction born in layer $a+1$; a map between two such directions exists precisely when the target birth layer is no larger than the source birth layer. Intervals starting later contribute zero at the endpoint. This proves both inclusion and surjectivity onto every allowed block.
+Write $f_{j,t}=\dim_KF_{j,t}$. Fix $t$, put $\sigma=\theta_{t+1}\theta_t$, and choose bases in the forward chains. Let $A_i$ and $B_i$ be the matrices of $a_{i,t}$ and $a_{i,t+2}$, respectively. The twisted chain $\sigma M_t$ has the same vertex dimensions as $M_t$ and arrow matrices $\sigma(A_i)$, obtained by applying $\sigma$ entrywise. If the reverse arrow is $v\mapsto R_i\sigma(v)$, its relation map is the $K$-linear map
+\[
+ \rho:\bigoplus_{i=0}^{n-2}\Hom_K((\sigma M_t)_{i+1},M_{i,t+2})
+ \longrightarrow\bigoplus_{i=0}^{n-1}\Hom_K((\sigma M_t)_i,M_{i,t+2})
+\]
+with components
+\begin{align*}
+ (\rho R)_0&=R_0\sigma(A_0),\\
+ (\rho R)_i&=R_i\sigma(A_i)-B_{i-1}R_{i-1}\quad(1\le i<n-1),\\
+ (\rho R)_{n-1}&=-B_{n-2}R_{n-2}.
+\end{align*}
+If $\varepsilon_{t+1}\varepsilon_t(v)=C_t\sigma(v)$, the required equation is $\rho R=(C_t,0,\ldots,0)$.
 
-The transpose, under trace pairings, of the reverse-arrow relation map is the usual chain Hom differential. Its cokernel is $\Ext^1(M_{t+2},M_t)$, with the source transported to make the maps linear. Pairing the boundary term in \eqref{eq:square} with the kernel of this differential shows that reverse arrows exist precisely when
+Pair matrices in opposite directions by $\langle f,g\rangle=\operatorname{tr}(fg)$, where $\operatorname{tr}$ is the sum of the diagonal entries, and sum over vertices or arrows. For maps $f_i:M_{i,t+2}\to(\sigma M_t)_i$, let
+\[
+ (df)_i=f_{i+1}B_i-\sigma(A_i)f_i.
+\]
+Direct expansion gives
+\[
+ \sum_i\operatorname{tr}(f_i(\rho R)_i)
+ =-\sum_{i=0}^{n-2}\operatorname{tr}((df)_iR_i).
+\]
+Thus $\rho$ is the negative transpose of $d$. The chain Hom complex has kernel $\Hom(M_{t+2},\sigma M_t)$ and cokernel $\Ext^1(M_{t+2},\sigma M_t)$: an extension splits at each vertex, its off-diagonal arrow blocks are arbitrary, and changing these splittings changes the blocks by $d$. Consequently
+\[
+ \dim_K\ker\rho=\dim_K\Ext^1(M_{t+2},\sigma M_t),
+\]
+and the equation for $R$ is solvable exactly when $\operatorname{tr}(f_0C_t)=0$ for every $f\in\Hom(M_{t+2},\sigma M_t)$.
+
+An interval starting at zero and ending at $a$ contributes an endpoint flag direction born in layer $a+1$. Between two such intervals a map with nonzero component at zero exists exactly when the target birth layer is no larger than the source birth layer. Intervals starting later have zero endpoint space. Hence evaluation at zero on $\Hom(M_{t+2},\sigma M_t)$ has all and only the blocks from source layer $a$ to target layer $b\le a$. Its trace annihilator consists of maps from layer $b$ to layers strictly below $b$. The solvability condition is therefore
 \begin{equation}\label{eq:lowerflags}
  \varepsilon_{t+1}\varepsilon_t F_{j,t}\subseteq F_{j-1,t+2}
  \quad\text{for all }t,j.
 \end{equation}
-In adapted flag bases the Hom evaluation has a block from source layer $a$ to target layer $b$ exactly when $b\le a$. Its trace annihilator has only the opposite, strictly decreasing blocks, which is \eqref{eq:lowerflags}. If this condition holds, the reverse-arrow solution set is an affine space of size
+Interval matrices have entries zero and one, so twisting preserves their labels and all the displayed Ext dimensions. When \eqref{eq:lowerflags} holds, the reverse-arrow solution sets together have size
 $z^{\sum_t\dim_K\Ext^1(M_{t+2},M_t)}$.
-Transport does not change an interval label, so these dimensions depend only on the forward-chain types.
+For $n=1$, the reverse-arrow space is zero, and solvability says $C_t=0$, again precisely \eqref{eq:lowerflags}.
 
 Condition~\eqref{eq:lowerflags} forces every composite of $2n$ central arrows to vanish. Let $N$ range over the finite set of nilpotent cyclic chain labels with vertex dimensions $f_{n,t}$. Define $\Phi N$ by replacing each central arrow by the two-step map from $t$ to $t+2$. It is a representation of $\gcd(s,2)$ disjoint cycles. On every chain, taking alternate positions gives the chain decomposition of $\Phi N$; this operation on labels is independent of the field and of its automorphisms.
 

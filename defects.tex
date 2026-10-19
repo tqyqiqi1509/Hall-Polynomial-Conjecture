@@ -6,6 +6,8 @@ Write $\operatorname{mod}A$ for the category of finite-dimensional right $A$-mod
 \]
 Finite division rings are fields. Since $k$ is perfect, radicals commute with separable scalar extension. Thus $E=\FF_{q^r}$ is conservative precisely when $\gcd(r,D_A)=1$. Moreover, the modules $(I_i)_E$ form a complete, nonrepeating indecomposable list over every such $E$. Indeed, an $A_E$-module is a direct summand of the scalar extension of its restriction to $A$, because $E/k$ is separable. The restriction is in $\add(\bigoplus_i I_i)$. The semisimple quotient of the endomorphism algebra of this sum becomes $\prod_i(K_i\otimes_kE)$, a product of fields; this also proves that the extended indecomposables remain pairwise nonisomorphic.
 
+Throughout the remainder of this section, $E/k$ is conservative for $A$.
+
 Write $h(M,N)=\dim_k\Hom_A(M,N)$. For $M=\bigoplus_i I_i^{n_i}$, set
 \begin{equation}\label{eq:aut}
  a_M(T)=T^{h(M,M)-\sum_i d_i n_i^2}
@@ -37,12 +39,12 @@ For a short exact sequence
 \[
  \sigma:\quad 0\longrightarrow Y\xrightarrow{i}L\xrightarrow{p}X\longrightarrow0
 \]
-define $D_\sigma=\coker(P_L\to P_X)$. It has the projective resolution
+define $D_\sigma=\coker(P_L\to P_X)$. In the category of all finite-dimensional contravariant additive functors on $\add G$, equivalently right $\End_A(G)$-modules, it has the projective resolution
 \begin{equation}\label{eq:resolution}
  0\longrightarrow P_Y\longrightarrow P_L\longrightarrow P_X
  \longrightarrow D_\sigma\longrightarrow0.
 \end{equation}
-Every finite-dimensional right $\Lambda$-module arises in this way. To see this, take a projective presentation $P_L\to P_X\to D\to0$. Yoneda identifies the first map with a morphism $p:L\to X$. Evaluating at $A$ and using $D(A)=0$ shows that $p$ is surjective. Its kernel supplies \eqref{eq:resolution}.
+Every finite-dimensional right $\Lambda$-module arises in this way. To see this, take a projective presentation in this full functor category, $P_L\to P_X\to D\to0$. Yoneda identifies the first map with a morphism $p:L\to X$. Evaluating at $A$ and using $D(A)=0$ shows that $p$ is surjective. Its kernel supplies \eqref{eq:resolution}.
 
 Every finite projective resolution is the direct sum of a minimal resolution and contractible complexes. Here this follows by eliminating an invertible matrix component of a differential until all differentials lie in the radical of $\add G$. Uniqueness follows successively from uniqueness of projective covers. Consequently, there is a unique minimal sequence
 \[
@@ -133,7 +135,7 @@ Define the mass, over the current extension field, by
 For fixed dimension this is a finite sum. The mass of the zero module is one. Incompatible data have mass zero.
 
 \begin{proposition}\label{prop:mass}
-Fix $X,Y,L$ and let $\delta$ be given by \eqref{eq:defdim}. If $B_s=Y\ominus Y(s)$ and $C_t=X\ominus X(t)$ denote existing direct-sum complements, then
+Let $E/k$ be conservative for $A$. Fix $X,Y,L$ and let $\delta$ be given by \eqref{eq:defdim}. If $B_s=Y\ominus Y(s)$ and $C_t=X\ominus X(t)$ denote existing direct-sum complements, then
 \begin{equation}\label{eq:mass}
  F^L_{X,Y}(E)=a_L(Q)Q^{h(X,Y)-h(L,Y)-h(X,L)}
  \sum_{t,s}\frac{Q^{h(B_s,B_s)+h(C_t,C_t)}}{a_{B_s}(Q)a_{C_t}(Q)}
