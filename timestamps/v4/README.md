@@ -1,7 +1,11 @@
-# v4 OpenTimestamps proofs
+# v4 confirmed Bitcoin timestamps
 
-These proofs commit to the exact v4 PDF and complete manuscript ZIP distributed as release assets. See `status.json` for the recorded state and SHA-256 hashes. The initial state is **pending Bitcoin confirmation**.
+Both release artifacts (PDF and source/complete-folder ZIP) have confirmed Bitcoin attestations in block **972137**, whose header records **2026-10-19T19:17:20+08:00**.
 
-Download the two original release files into this directory before running `timestamp.py`; retain the exact original bytes. With the Python `opentimestamps` library installed, the script upgrades the saved proofs by querying their calendars. An attestation being present does not itself establish independent Bitcoin verification. Use the official OpenTimestamps client to upgrade and verify against Bitcoin, or the OpenTimestamps verification service at https://opentimestamps.org/.
+The `.ots` files in this directory are the completed proofs. `verification.json` records each original-file SHA-256 and the verified proof/header information. `status.json` replaces the earlier pending status. The immutable release may still contain its original pending proof bytes; use the completed copies here. The paper assets themselves are unchanged.
 
-The timestamp concerns the existence of these exact file bytes; it does not certify authorship, originality or mathematical correctness. Earlier versions remain separate.
+Original files: https://github.com/tqyqiqi1509/Hall-Polynomial-Conjecture/releases/tag/v4
+
+To verify, download the matching original artifact and its `.ots` file. Use the official OpenTimestamps client or https://opentimestamps.org/. Our check validated the file digests and OTS operation paths, matched the Merkle roots, checked header hashes and proof of work, and compared headers from Blockstream and mempool.space; it did not use a local Bitcoin full node.
+
+These proofs support existence of the exact committed bytes before the corresponding Bitcoin block. Block-header time is not an exact trusted wall-clock creation time. The proofs alone do not establish authorship, originality, mathematical correctness or a ruling on academic priority.

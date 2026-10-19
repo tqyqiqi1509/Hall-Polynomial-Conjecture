@@ -1,20 +1,24 @@
 [
   {
-    "file": "Hall-Polynomial-Conjecture-v1.pdf",
-    "sha256": "9e0aa0fb2298399473f38952c265e3726876e0aeb2beaa31963e74520b460175",
-    "block_height": 972025,
-    "block_hash": "00000000000000000001f7291ef851b3affc653595c2672a9f4dff65c20563fe",
-    "block_time_utc": "2026-10-18T16:39:43+00:00",
-    "block_time_beijing": "2026-10-19T00:39:43+08:00",
-    "verification": "Original digest, OTS operation path, block Merkle root, header hash checked; block header obtained from Blockstream. Public explorer verification, not local Bitcoin full-node consensus verification."
-  },
-  {
+    "version": "v1",
     "file": "Hall-Polynomial-Conjecture-v1-source.zip",
     "sha256": "2a1504837686060dd69107af77f5922f3e4a0408610d8baf26e6bde68b3d79c8",
+    "proof_sha256": "f649950c2c94ef50b54950ff55b316b6bed9aa2599da3737fa9778aa19996d0f",
     "block_height": 972025,
     "block_hash": "00000000000000000001f7291ef851b3affc653595c2672a9f4dff65c20563fe",
-    "block_time_utc": "2026-10-18T16:39:43+00:00",
     "block_time_beijing": "2026-10-19T00:39:43+08:00",
-    "verification": "Original digest, OTS operation path, block Merkle root, header hash checked; block header obtained from Blockstream. Public explorer verification, not local Bitcoin full-node consensus verification."
+    "verified": true,
+    "verification": "File digest and OTS operation path to Merkle root; header hash and proof of work; matching Blockstream and mempool.space headers. Not local full-node consensus validation."
+  },
+  {
+    "version": "v1",
+    "file": "Hall-Polynomial-Conjecture-v1.pdf",
+    "sha256": "9e0aa0fb2298399473f38952c265e3726876e0aeb2beaa31963e74520b460175",
+    "proof_sha256": "0ab00a48f3879fbcb26ff50807b2ac5e62c7052e8f2c60f48d7d411fad8fbd98",
+    "block_height": 972025,
+    "block_hash": "00000000000000000001f7291ef851b3affc653595c2672a9f4dff65c20563fe",
+    "block_time_beijing": "2026-10-19T00:39:43+08:00",
+    "verified": true,
+    "verification": "File digest and OTS operation path to Merkle root; header hash and proof of work; matching Blockstream and mempool.space headers. Not local full-node consensus validation."
   }
 ]

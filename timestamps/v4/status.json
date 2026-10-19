@@ -1,50 +1,28 @@
 {
-  "updated_utc": "2026-10-19T11:13:46.858069+00:00",
+  "checked_utc": "2026-10-19T14:16:01.264822+00:00",
+  "status": "bitcoin_anchor_verified_against_two_public_explorers",
   "files": [
     {
-      "file": "Hall-Polynomial-Conjecture-v4.pdf",
-      "sha256": "16d96de20c631787e0744d094274d48c46602a69c59cc00cb3c7d6b8c97b54f7",
-      "proof": "Hall-Polynomial-Conjecture-v4.pdf.ots",
-      "proof_sha256": "24b5d474a8db622ceaf394a73bd91bd0426438eac600bc9c8e1073ef40565136",
-      "bitcoin_block_heights": [],
-      "status": "pending_bitcoin_confirmation",
-      "errors": [
-        {
-          "calendar": "https://bob.btc.calendar.opentimestamps.org",
-          "upgrade_error": "'Pending confirmation in Bitcoin blockchain'"
-        },
-        {
-          "calendar": "https://finney.calendar.eternitywall.com",
-          "upgrade_error": "'Pending confirmation in Bitcoin blockchain'"
-        },
-        {
-          "calendar": "https://alice.btc.calendar.opentimestamps.org",
-          "upgrade_error": "'Pending confirmation in Bitcoin blockchain'"
-        }
-      ]
-    },
-    {
+      "version": "v4",
       "file": "Hall-Polynomial-Conjecture-v4-complete.zip",
       "sha256": "ed994cfd25b99bc57f0dcf508000ec749733fd4eae354b81ca8bc0e393b16260",
-      "proof": "Hall-Polynomial-Conjecture-v4-complete.zip.ots",
-      "proof_sha256": "40193d0381414d1c73811a640362c644807f4d90cc4066d16de1620e01e69ea9",
-      "bitcoin_block_heights": [],
-      "status": "pending_bitcoin_confirmation",
-      "errors": [
-        {
-          "calendar": "https://finney.calendar.eternitywall.com",
-          "upgrade_error": "'Pending confirmation in Bitcoin blockchain'"
-        },
-        {
-          "calendar": "https://alice.btc.calendar.opentimestamps.org",
-          "upgrade_error": "'Pending confirmation in Bitcoin blockchain'"
-        },
-        {
-          "calendar": "https://bob.btc.calendar.opentimestamps.org",
-          "upgrade_error": "'Pending confirmation in Bitcoin blockchain'"
-        }
-      ]
+      "proof_sha256": "cdd32b26839c8b3e11195768d9fdf930cb116ee559ac47f2c1bac9dd15890fcc",
+      "block_height": 972137,
+      "block_hash": "00000000000000000000a5b95f6f780a9121a65a8c2537c9a056f592d4fcddb3",
+      "block_time_beijing": "2026-10-19T19:17:20+08:00",
+      "verified": true,
+      "verification": "File digest and OTS operation path to Merkle root; block header hash and proof of work; matching headers from Blockstream and mempool.space. Not a local full-node consensus validation."
+    },
+    {
+      "version": "v4",
+      "file": "Hall-Polynomial-Conjecture-v4.pdf",
+      "sha256": "16d96de20c631787e0744d094274d48c46602a69c59cc00cb3c7d6b8c97b54f7",
+      "proof_sha256": "db20a9bad3ebdefcd3313bb69b78155839baeb4437c52d28b3eeca587dd7e90d",
+      "block_height": 972137,
+      "block_hash": "00000000000000000000a5b95f6f780a9121a65a8c2537c9a056f592d4fcddb3",
+      "block_time_beijing": "2026-10-19T19:17:20+08:00",
+      "verified": true,
+      "verification": "File digest and OTS operation path to Merkle root; block header hash and proof of work; matching headers from Blockstream and mempool.space. Not a local full-node consensus validation."
     }
-  ],
-  "verification": "Proof parsing and original-file SHA-256 checked. A pending calendar attestation is not Bitcoin confirmation."
+  ]
 }

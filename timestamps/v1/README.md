@@ -1,39 +1,11 @@
-# OpenTimestamps proofs for Hall Polynomial Conjecture v1
+# v1 confirmed Bitcoin timestamps
 
-These proofs concern the exact PDF and source ZIP attached to:
-https://github.com/tqyqiqi1509/Hall-Polynomial-Conjecture/releases/tag/v1
+Both release artifacts (PDF and source/complete-folder ZIP) have confirmed Bitcoin attestations in block **972025**, whose header records **2026-10-19T00:39:43+08:00**.
 
-The files were not recompiled or edited for timestamping.
+The `.ots` files in this directory are the completed proofs. `verification.json` records each original-file SHA-256 and the verified proof/header information. `status.json` replaces the earlier pending status. The immutable release may still contain its original pending proof bytes; use the completed copies here. The paper assets themselves are unchanged.
 
-## Status
+Original files: https://github.com/tqyqiqi1509/Hall-Polynomial-Conjecture/releases/tag/v1
 
-Both proofs have been upgraded with Bitcoin block attestations. The original digests and proof paths match the Merkle root of Bitcoin block 972025. Its header timestamp is 2026-10-19 00:39:43 +08:00 (Asia/Shanghai).
-Verification used Blockstream public block-header data, not a local full Bitcoin node. See verification.json for details.
+To verify, download the matching original artifact and its `.ots` file. Use the official OpenTimestamps client or https://opentimestamps.org/. Our check validated the file digests and OTS operation paths, matched the Merkle roots, checked header hashes and proof of work, and compared headers from Blockstream and mempool.space; it did not use a local Bitcoin full node.
 
-Keep each original file together with its corresponding .ots proof.
-The SHA-256 file digests were checked against the frozen v1 release.
-
-## Complete the proofs
-
-Once calendars have anchored the commitments, use the official client:
-
-    ots upgrade Hall-Polynomial-Conjecture-v1.pdf.ots
-    ots upgrade Hall-Polynomial-Conjecture-v1-source.zip.ots
-
-The included timestamp.py can also retrieve and merge calendar updates using the official Python OpenTimestamps library:
-
-    python timestamp.py
-
-It records whether a Bitcoin block-header attestation is present. It does not independently validate Bitcoin consensus or verify block inclusion against a Bitcoin node.
-
-## Verify
-
-    ots verify Hall-Polynomial-Conjecture-v1.pdf.ots
-    ots verify Hall-Polynomial-Conjecture-v1-source.zip.ots
-
-The official Python client requires access to Bitcoin Core for independent verification.
-The OpenTimestamps website also provides a browser verification interface:
-https://opentimestamps.org/
-
-A Bitcoin timestamp supports existence of these exact bytes before the anchoring block.
-It does not certify mathematical correctness, authorship, or academic priority.
+These proofs support existence of the exact committed bytes before the corresponding Bitcoin block. Block-header time is not an exact trusted wall-clock creation time. The proofs alone do not establish authorship, originality, mathematical correctness or a ruling on academic priority.

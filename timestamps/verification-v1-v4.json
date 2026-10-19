@@ -1,0 +1,90 @@
+[
+  {
+    "version": "v1",
+    "file": "Hall-Polynomial-Conjecture-v1-source.zip",
+    "sha256": "2a1504837686060dd69107af77f5922f3e4a0408610d8baf26e6bde68b3d79c8",
+    "proof_sha256": "f649950c2c94ef50b54950ff55b316b6bed9aa2599da3737fa9778aa19996d0f",
+    "block_height": 972025,
+    "block_hash": "00000000000000000001f7291ef851b3affc653595c2672a9f4dff65c20563fe",
+    "block_time_beijing": "2026-10-19T00:39:43+08:00",
+    "verified": true,
+    "verification": "File digest and OTS operation path to Merkle root; header hash and proof of work; matching Blockstream and mempool.space headers. Not local full-node consensus validation."
+  },
+  {
+    "version": "v1",
+    "file": "Hall-Polynomial-Conjecture-v1.pdf",
+    "sha256": "9e0aa0fb2298399473f38952c265e3726876e0aeb2beaa31963e74520b460175",
+    "proof_sha256": "0ab00a48f3879fbcb26ff50807b2ac5e62c7052e8f2c60f48d7d411fad8fbd98",
+    "block_height": 972025,
+    "block_hash": "00000000000000000001f7291ef851b3affc653595c2672a9f4dff65c20563fe",
+    "block_time_beijing": "2026-10-19T00:39:43+08:00",
+    "verified": true,
+    "verification": "File digest and OTS operation path to Merkle root; header hash and proof of work; matching Blockstream and mempool.space headers. Not local full-node consensus validation."
+  },
+  {
+    "version": "v2",
+    "file": "Hall-Polynomial-Conjecture-v2-complete.zip",
+    "sha256": "dbed7e6cdbfe681d0636f8faf4bdd25699394a9a0fa81e3284458d25134e1281",
+    "proof_sha256": "f70fe00bd821b3b194740561e113121ba4689e50d0f16e7ac1f15d714521c3de",
+    "block_height": 972130,
+    "block_hash": "000000000000000000012d8e63f7b2b06ad380024e51a5d9db977efca224e8e6",
+    "block_time_beijing": "2026-10-19T17:57:08+08:00",
+    "verified": true,
+    "verification": "File digest and OTS operation path to Merkle root; block header hash and proof of work; matching headers from Blockstream and mempool.space. Not a local full-node consensus validation."
+  },
+  {
+    "version": "v2",
+    "file": "Hall-Polynomial-Conjecture-v2.pdf",
+    "sha256": "506f6b73c6f39aa28b03d66fc0d59322f419e8c0fc33db84eadca876e30bc9ea",
+    "proof_sha256": "35660b0441afdd874da784b1bba4c98b0947604975c4d1dc8e513279ed2d03ee",
+    "block_height": 972130,
+    "block_hash": "000000000000000000012d8e63f7b2b06ad380024e51a5d9db977efca224e8e6",
+    "block_time_beijing": "2026-10-19T17:57:08+08:00",
+    "verified": true,
+    "verification": "File digest and OTS operation path to Merkle root; block header hash and proof of work; matching headers from Blockstream and mempool.space. Not a local full-node consensus validation."
+  },
+  {
+    "version": "v3",
+    "file": "Hall-Polynomial-Conjecture-v3-complete.zip",
+    "sha256": "b9f90af866c1164bfb4b5651ebd8f4b29d8e99ecdd087ffa596ab550ffef4096",
+    "proof_sha256": "c9ad505388fc670fbf91fa3c1b7783d330ae45b5cef9e87ac835bebf22519968",
+    "block_height": 972137,
+    "block_hash": "00000000000000000000a5b95f6f780a9121a65a8c2537c9a056f592d4fcddb3",
+    "block_time_beijing": "2026-10-19T19:17:20+08:00",
+    "verified": true,
+    "verification": "File digest and OTS operation path to Merkle root; block header hash and proof of work; matching headers from Blockstream and mempool.space. Not a local full-node consensus validation."
+  },
+  {
+    "version": "v3",
+    "file": "Hall-Polynomial-Conjecture-v3.pdf",
+    "sha256": "5a52e96ec33aca973c9d1f98d4f02bbe2628f4bbfe7388434bcf5eb09dd93341",
+    "proof_sha256": "e1b75bf804e5134dce9f18a5f58ba2a2525da7e8b9d48017009545de914c943d",
+    "block_height": 972137,
+    "block_hash": "00000000000000000000a5b95f6f780a9121a65a8c2537c9a056f592d4fcddb3",
+    "block_time_beijing": "2026-10-19T19:17:20+08:00",
+    "verified": true,
+    "verification": "File digest and OTS operation path to Merkle root; block header hash and proof of work; matching headers from Blockstream and mempool.space. Not a local full-node consensus validation."
+  },
+  {
+    "version": "v4",
+    "file": "Hall-Polynomial-Conjecture-v4-complete.zip",
+    "sha256": "ed994cfd25b99bc57f0dcf508000ec749733fd4eae354b81ca8bc0e393b16260",
+    "proof_sha256": "cdd32b26839c8b3e11195768d9fdf930cb116ee559ac47f2c1bac9dd15890fcc",
+    "block_height": 972137,
+    "block_hash": "00000000000000000000a5b95f6f780a9121a65a8c2537c9a056f592d4fcddb3",
+    "block_time_beijing": "2026-10-19T19:17:20+08:00",
+    "verified": true,
+    "verification": "File digest and OTS operation path to Merkle root; block header hash and proof of work; matching headers from Blockstream and mempool.space. Not a local full-node consensus validation."
+  },
+  {
+    "version": "v4",
+    "file": "Hall-Polynomial-Conjecture-v4.pdf",
+    "sha256": "16d96de20c631787e0744d094274d48c46602a69c59cc00cb3c7d6b8c97b54f7",
+    "proof_sha256": "db20a9bad3ebdefcd3313bb69b78155839baeb4437c52d28b3eeca587dd7e90d",
+    "block_height": 972137,
+    "block_hash": "00000000000000000000a5b95f6f780a9121a65a8c2537c9a056f592d4fcddb3",
+    "block_time_beijing": "2026-10-19T19:17:20+08:00",
+    "verified": true,
+    "verification": "File digest and OTS operation path to Merkle root; block header hash and proof of work; matching headers from Blockstream and mempool.space. Not a local full-node consensus validation."
+  }
+]

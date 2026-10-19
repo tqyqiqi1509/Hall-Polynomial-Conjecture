@@ -22,4 +22,15 @@ Run `pdflatex main.tex` twice with all ten TeX files present. The supplied PDF h
 
 v4 contains the current manuscript and 34-page PDF verified against the local paper folder on 19 October 2026. Earlier releases remain frozen.
 
-OpenTimestamps proofs and their current confirmation status accompany the release. Calendar acceptance is distinct from Bitcoin confirmation; see the timestamp instructions.
+All four versions have confirmed Bitcoin timestamp proofs for their PDF and source/complete-folder ZIP. Completed proofs and verification records are available below; paper release assets remain unchanged.
+
+| Version | Bitcoin block | Block-header time (Beijing, 19 October 2026) | Completed proofs |
+|---|---:|---|---|
+| v1 | 972025 | 00:39:43 | [v1](timestamps/v1/README.md) |
+| v2 | 972130 | 17:57:08 | [v2](timestamps/v2/README.md) |
+| v3 | 972137 | 19:17:20 | [v3](timestamps/v3/README.md) |
+| v4 | 972137 | 19:17:20 | [v4](timestamps/v4/README.md) |
+
+[Download all eight completed proofs and verification records](timestamps/confirmed-v1-v4.zip).
+
+These timestamps support existence of the exact files before the corresponding Bitcoin blocks. The block-header time is not an exact creation-time certificate. They are supporting evidence for provenance and priority arguments, not independent findings of authorship, originality or mathematical correctness.

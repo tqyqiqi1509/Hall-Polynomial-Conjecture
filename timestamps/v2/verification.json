@@ -1,0 +1,24 @@
+[
+  {
+    "version": "v2",
+    "file": "Hall-Polynomial-Conjecture-v2-complete.zip",
+    "sha256": "dbed7e6cdbfe681d0636f8faf4bdd25699394a9a0fa81e3284458d25134e1281",
+    "proof_sha256": "f70fe00bd821b3b194740561e113121ba4689e50d0f16e7ac1f15d714521c3de",
+    "block_height": 972130,
+    "block_hash": "000000000000000000012d8e63f7b2b06ad380024e51a5d9db977efca224e8e6",
+    "block_time_beijing": "2026-10-19T17:57:08+08:00",
+    "verified": true,
+    "verification": "File digest and OTS operation path to Merkle root; block header hash and proof of work; matching headers from Blockstream and mempool.space. Not a local full-node consensus validation."
+  },
+  {
+    "version": "v2",
+    "file": "Hall-Polynomial-Conjecture-v2.pdf",
+    "sha256": "506f6b73c6f39aa28b03d66fc0d59322f419e8c0fc33db84eadca876e30bc9ea",
+    "proof_sha256": "35660b0441afdd874da784b1bba4c98b0947604975c4d1dc8e513279ed2d03ee",
+    "block_height": 972130,
+    "block_hash": "000000000000000000012d8e63f7b2b06ad380024e51a5d9db977efca224e8e6",
+    "block_time_beijing": "2026-10-19T17:57:08+08:00",
+    "verified": true,
+    "verification": "File digest and OTS operation path to Merkle root; block header hash and proof of work; matching headers from Blockstream and mempool.space. Not a local full-node consensus validation."
+  }
+]
