@@ -4,20 +4,21 @@
 
 *Hall polynomials for representation-finite algebras.*
 
-- [Read the current paper](main.pdf)
+- [Current paper](main.pdf)
 - [LaTeX source](main.tex)
-- [Frozen v2 release and complete folder](https://github.com/tqyqiqi1509/Hall-Polynomial-Conjecture/releases/tag/v2)
+- [Frozen v3 release and complete paper folder](https://github.com/tqyqiqi1509/Hall-Polynomial-Conjecture/releases/tag/v3)
+- [Frozen v2 release](https://github.com/tqyqiqi1509/Hall-Polynomial-Conjecture/releases/tag/v2)
 - [Frozen v1 release](https://github.com/tqyqiqi1509/Hall-Polynomial-Conjecture/releases/tag/v1)
-- [v2 timestamp proofs and status](timestamps/v2/README.md)
+- [v3 timestamp proofs](timestamps/v3/README.md)
 
-The manuscript states integral Hall-polynomial existence for every representation-finite algebra over a finite field, evaluated on every conservative finite extension. It includes its AI-contribution disclosure.
+The manuscript states integral Hall-polynomial existence for every representation-finite algebra over a finite field, on every conservative finite extension. It includes its AI-contribution disclosure. An adversarial Rethlas-OSV review of this fixed v3 has been requested; no completed result is asserted here.
 
 ## Build
 
-Run `pdflatex main.tex` twice with all ten `.tex` files in the same directory. The current PDF has 32 pages. `SHA256.json` records the hashes of all eleven manuscript files in the uploaded paper folder.
+Run `pdflatex main.tex` twice with all ten TeX files present. The supplied PDF has 32 pages. `SHA256.json` records all ten sources and the PDF. The complete release archive includes these eleven files and the manifest.
 
 ## Versions and timestamps
 
-v2 contains the complete updated paper folder prepared on 19 October 2026. Published versions use separate release tags. The earlier v1 release and its timestamp records are preserved.
+v3 contains the revised abstract, notation, explicit recursion hypotheses and regenerated PDF. Earlier releases remain frozen.
 
-OpenTimestamps requests for the v2 PDF and complete folder ZIP were accepted on 19 October 2026. The published receipt currently records **pending Bitcoin confirmation**. A pending receipt is not a confirmed Bitcoin timestamp. See the timestamp instructions for upgrading and verification.
+OpenTimestamps proofs and their current confirmation status accompany the release. Calendar acceptance is distinct from Bitcoin confirmation; see the timestamp instructions.

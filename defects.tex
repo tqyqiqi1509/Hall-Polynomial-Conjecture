@@ -1,14 +1,14 @@
 \section{Defects and Hall numbers}\label{sec:defects}
-Fix representatives $I_1,\ldots,I_m$ of the indecomposable $A$-modules, and write
+Write $\operatorname{mod}A$ for the category of finite-dimensional right $A$-modules and $\add M$ for the full subcategory of direct summands of finite direct sums of $M$. The notation $M^n$ denotes a direct sum of $n$ copies of $M$, with $M^0=0$. For a finite extension $E/k$ put $Q=|E|$. Fix representatives $I_1,\ldots,I_m$ of the indecomposable $A$-modules, and write
 \[
  K_i=\End_A(I_i)/\rad\End_A(I_i)=\FF_{q^{d_i}},\qquad
  D_A=\operatorname{lcm}(d_1,\ldots,d_m).
 \]
 Finite division rings are fields. Since $k$ is perfect, radicals commute with separable scalar extension. Thus $E=\FF_{q^r}$ is conservative precisely when $\gcd(r,D_A)=1$. Moreover, the modules $(I_i)_E$ form a complete, nonrepeating indecomposable list over every such $E$. Indeed, an $A_E$-module is a direct summand of the scalar extension of its restriction to $A$, because $E/k$ is separable. The restriction is in $\add(\bigoplus_i I_i)$. The semisimple quotient of the endomorphism algebra of this sum becomes $\prod_i(K_i\otimes_kE)$, a product of fields; this also proves that the extended indecomposables remain pairwise nonisomorphic.
 
-Write $h(M,N)=\dim_k\Hom_A(M,N)$ and $e(M)=h(M,M)$. For $M=\bigoplus_i I_i^{n_i}$, set
+Write $h(M,N)=\dim_k\Hom_A(M,N)$. For $M=\bigoplus_i I_i^{n_i}$, set
 \begin{equation}\label{eq:aut}
- a_M(T)=T^{e(M)-\sum_i d_i n_i^2}
+ a_M(T)=T^{h(M,M)-\sum_i d_i n_i^2}
  \prod_i\prod_{j=0}^{n_i-1}(T^{d_i n_i}-T^{d_i j}).
 \end{equation}
 Empty products equal one, so $a_0=1$. The formula for the units of a finite algebra, applied to $\End_A(M)$, gives $a_M(|E|)=|\Aut(M_E)|$. All these polynomials are monic.
@@ -26,7 +26,7 @@ Let $R\in\R$. If $R(Q)$ is an integer for an unbounded set of positive integers 
 Write $R=P/B$ with $P,B\in\ZZ[T]$ and $B$ monic. Division in $\ZZ[T]$ gives $P=BH+U$ with $\deg U<\deg B$. Along the given integers, $U(Q)/B(Q)$ is an integer tending to zero. Hence $U$ has infinitely many zeros and vanishes.
 \end{proof}
 
-\subsection{Minimal sequences}
+\subsection{Minimal exact sequences}
 Put $G=\bigoplus_iI_i$ and let
 \[
  \Lambda=\End_A(G)/[\operatorname{proj}A],
@@ -55,7 +55,7 @@ with defect $D$, and every sequence with that defect is uniquely, up to isomorph
 \end{equation}
 Thus its terms are $Y_D\oplus B$, $L_D\oplus B\oplus C$, and $X_D\oplus C$.
 
-For a nonprojective $I_i$ let $S_i=P_{I_i}/\rad(-,I_i)$. For a defect $D$, write
+For a nonprojective $I_i$ let $S_i=P_{I_i}/\rad(-,I_i)$, where $\rad(-,I_i)$ is the subfunctor of radical morphisms into $I_i$. For a finite-length functor, the top is its largest semisimple quotient and the socle is its largest semisimple subfunctor. For a defect $D$, write
 \[
  \delta_i(D)=\dim_kD(I_i),\quad
  t_i(D)=[\topm D:S_i],\quad s_i(D)=[\soc D:S_i].
@@ -100,7 +100,7 @@ In particular the minimal middle term is determined by those data.
 If the contractible terms of $\sigma$ are $B,C$, then over a field of order $Q$,
 \begin{equation}\label{eq:autseq}
  |\Aut(\sigma)|=
- Q^{h(L,Y)+h(X,L)-h(X,Y)-e(B)-e(C)}|\Aut(D_\sigma)|a_B(Q)a_C(Q).
+ Q^{h(L,Y)+h(X,L)-h(X,Y)-h(B,B)-h(C,C)}|\Aut(D_\sigma)|a_B(Q)a_C(Q).
 \end{equation}
 \end{lemma}
 \begin{proof}
@@ -130,13 +130,13 @@ Define the mass, over the current extension field, by
  \delta(D)=\delta,\ t(D)=t,\ s(D)=s}}
  \frac1{|\Aut(D)|}.
 \]
-For fixed dimension this is a finite sum. No representation-finiteness assumption on $\Lambda$ is needed. The mass of the zero module is one. Incompatible data have mass zero.
+For fixed dimension this is a finite sum. The mass of the zero module is one. Incompatible data have mass zero.
 
 \begin{proposition}\label{prop:mass}
 Fix $X,Y,L$ and let $\delta$ be given by \eqref{eq:defdim}. If $B_s=Y\ominus Y(s)$ and $C_t=X\ominus X(t)$ denote existing direct-sum complements, then
 \begin{equation}\label{eq:mass}
  F^L_{X,Y}(E)=a_L(Q)Q^{h(X,Y)-h(L,Y)-h(X,L)}
- \sum_{t,s}\frac{Q^{e(B_s)+e(C_t)}}{a_{B_s}(Q)a_{C_t}(Q)}
+ \sum_{t,s}\frac{Q^{h(B_s,B_s)+h(C_t,C_t)}}{a_{B_s}(Q)a_{C_t}(Q)}
  \mathfrak M_{\delta,t,s}(E).
 \end{equation}
 The sum ranges over precisely the pairs for which both complements exist.

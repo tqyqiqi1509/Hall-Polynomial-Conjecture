@@ -1,5 +1,5 @@
 \section{Boundary maps and Hall numbers}\label{sec:boundary}
-All modules in the remaining sections are right modules. Products of paths are written in walking order: if $a:x\to y$ and $b:y\to z$, then $ab:x\to z$. Composition of linear maps retains the convention $gf=g\circ f$. For a module $V$, put $\rad V=V\rad A$; its socle $\soc V$ is its largest semisimple submodule. We write $D_kV=\Hom_k(V,k)$.
+All modules in the remaining sections are right modules. Products of paths are written in walking order: if $a:x\to y$ and $b:y\to z$, then $ab:x\to z$. Composition of linear maps retains the convention $gf=g\circ f$. At a quiver vertex $v$, write $e_v$ for the primitive idempotent and $S_v$ for the corresponding simple module. For a module $V$, put $\rad V=V\rad A$; its socle $\soc V$ is its largest semisimple submodule. We write $D_kV=\Hom_k(V,k)$.
 
 We first give a counting argument for two algebras with a common quotient. Suppose $A_0,A_1$ have ideals $J_0,J_1$ and specified identifications $A_i/J_i=C$. Suppose corresponding modules $E_i$ have identified $C$-modules
 \[
@@ -93,33 +93,33 @@ at the root, from the nonstandard to the standard side. The last-arrow value $r^
 For $\Omega\subseteq H^m$ and $g:\Omega\to N'$, condition \eqref{eq:stable-compensation} holds with $\psi=1+n$, where $n^2=0$, $n$ kills $\rad N'$, and its image lies in the root part of $\soc N'\cap\rad N'$.
 \end{lemma}
 \begin{proof}
-Write a root vector as $rx+r^2y$, with $x,y\in k^m$. Let $W\subseteq k^m$ be the space of first coefficients of vectors in $\Omega_x$. The first-coefficient map has kernel $L=\ker(r:\Omega_x\to\Omega_x)$. Choose a linear section $\sigma:W\to\Omega_x$. Closure under paths gives $r^2W\subseteq\Omega_x$ and $rp_jW\subseteq\Omega_j$.
+Write a root vector as $r\xi+r^2\eta$, with $\xi,\eta\in k^m$. Let $W\subseteq k^m$ be the space of first coefficients of vectors in $\Omega_x$. The first-coefficient map has kernel $L=\ker(r:\Omega_x\to\Omega_x)$. Choose a linear section $\sigma:W\to\Omega_x$. Closure under paths gives $r^2W\subseteq\Omega_x$ and $rp_jW\subseteq\Omega_j$.
 
-On the arm chain $1\to\cdots\to n-1$, the second columns $rp_jW$ form a constant subrepresentation. It is injective in the category of chain representations: for one copy, a map from a chain $V$ is determined by an arbitrary functional on $V_{n-1}$, and the earlier components are its composites with the intervening arrows. This Hom functor is exact. Hence there are chain-compatible retractions $\rho_j:\Omega_j\to W$ with $\rho_j(rp_jx)=x$.
+On the arm chain $1\to\cdots\to n-1$, the second columns $rp_jW$ form a constant subrepresentation. It is injective in the category of chain representations: for one copy, a map from a chain $V$ is determined by an arbitrary functional on $V_{n-1}$, and the earlier components are its composites with the intervening arrows. This Hom functor is exact. Hence there are chain-compatible retractions $\rho_j:\Omega_j\to W$ with $\rho_j(rp_j\xi)=\xi$.
 
-We first construct a projective factorization. Suppose $u:W\to(\rad N')_x$ satisfies $u(x)r^2=u(x)rp_j=0$, and let $p:W\to W$ be linear. The map with root values $\sigma(x)\mapsto u(px)r$, zero on $L$ and zero on the arms, factors through projectives. Indeed, root isolation gives
+We first construct a projective factorization. Suppose $u:W\to(\rad N')_x$ satisfies $u(\xi)r^2=u(\xi)rp_j=0$. The map with root values $\sigma(\xi)\mapsto u(\xi)r$, zero on $L$ and zero on the arms, factors through projectives. Indeed, root isolation gives
 \[
  (\rad N')_x=N'_xr+\sum_{i=1}^{n-1}N'_iq_i.
 \]
-Choose linear $w:W\to N'_x$, $z_i:W\to N'_i$ with $u(x)=w(x)r+\sum_i z_i(x)q_i$. The $w(px)r^2$ term factors through $T\otimes_kW$: send $\sigma(x)$ to $r^2\otimes px$, all other components to zero, and then $1\otimes x$ to $w(x)$. This commutes with the first arrow because $r^2p_1=0$ and with the last because its source image lies in $L$.
+Choose linear $w:W\to N'_x$, $z_i:W\to N'_i$ with $u(\xi)=w(\xi)r+\sum_i z_i(\xi)q_i$. The $w(\xi)r^2$ term factors through $T\otimes_kW$: send $\sigma(\xi)$ to $r^2\otimes \xi$, all other components to zero, and then $1\otimes\xi$ to $w(\xi)$. This commutes with the first arrow because $r^2p_1=0$ and with the last because its source image lies in $L$.
 
-For the $i$th remaining term use $e_iC\otimes_kW$. Send $\sigma(x)$ to $q_ir\otimes px$, send $L$ to zero, and send $v\in\Omega_j$ to
+For the $i$th remaining term use $e_iC\otimes_kW$. Send $\sigma(\xi)$ to $q_ir\otimes \xi$, send $L$ to zero, and send $v\in\Omega_j$ to
 \[
- q_irp_j\otimes p\rho_j(v).
+ q_irp_j\otimes\rho_j(v).
 \]
-The loop commutes by $q_ir^2=0$; the first arrow commutes by the retraction identity; internal arrows commute by chain compatibility. The last arrow gives $q_irp_{n-1}a_n=q_ir^3=0$, and its source image lies in $L$. Outside arrows commute because $p_jb=0$ and the source has zero outside spaces. Send the projective generator $e_i\otimes x$ to $z_i(x)$. All these factors use the same retraction, so their total arm value is zero:
+The loop commutes by $q_ir^2=0$; the first arrow commutes by the retraction identity; internal arrows commute by chain compatibility. The last arrow gives $q_irp_{n-1}a_n=q_ir^3=0$, and its source image lies in $L$. Outside arrows commute because $p_jb=0$ and the source has zero outside spaces. Send the projective generator $e_i\otimes\xi$ to $z_i(\xi)$. All these factors use the same retraction, so their total arm value is zero:
 \[
- \sum_i z_i(y)q_irp_j=u(y)rp_j-w(y)r^2p_j=0.
+ \sum_i z_i(\eta)q_irp_j=u(\eta)rp_j-w(\eta)r^2p_j=0\qquad(\eta\in W).
 \]
-Their root sum is $u(px)r$, as required.
+Their root sum is $u(\xi)r$, as required.
 
-Now let $\pi:N'_x\to N'_x/(\rad N')_x$ be the root top projection. Put $B=\pi(gL)$ and define $t:W\to N'_x/(\rad N')_x/B$ by $t(x)=\pi(g\sigma(x))+B$. Choose $W=W_0\oplus W_v$ with $W_0=\ker t$, and denote the projections by $p_0,p_v$. The spaces $B$ and $\pi(g\sigma(W_v))$ are disjoint. Define a map from the root top to the root socle by zero on $B$, by
+Now let $\pi:N'_x\to N'_x/(\rad N')_x$ be the root top projection. Put $B=\pi(gL)$ and define $t:W\to N'_x/(\rad N')_x/B$ by $t(\xi)=\pi(g\sigma(\xi))+B$. Choose $W=W_0\oplus W_v$ with $W_0=\ker t$, and denote the projections by $p_0,p_v$. The spaces $B$ and $\pi(g\sigma(W_v))$ are disjoint. Define a map from the root top to the root socle by zero on $B$, by
 \[
- \pi(g\sigma(x))\longmapsto g\sigma(x)r\qquad(x\in W_v),
+ \pi(g\sigma(\xi))\longmapsto g\sigma(\xi)r\qquad(\xi\in W_v),
 \]
-and by zero on a complementary space. The values lie in $\rad N'\cap\soc N'$ because $\sigma(x)r^2=\sigma(x)rp_1=0$ and the root has no other outgoing arrow. Composing with the top projection and socle inclusion gives a $C$-endomorphism $n$ with $n^2=0$. It satisfies $ngL=0$ and $ng\sigma(x)=g\sigma(p_vx)r$.
+and by zero on a complementary space. The values lie in $\rad N'\cap\soc N'$ because $\sigma(\xi)r^2=\sigma(\xi)rp_1=0$ and the root has no other outgoing arrow. Composing with the top projection and socle inclusion gives a $C$-endomorphism $n$ with $n^2=0$. It satisfies $ngL=0$ and $ng\sigma(\xi)=g\sigma(p_v\xi)r$.
 
-For $x\in W_0$, choose linearly $\ell(x)\in L$ with $\pi(g\sigma(x))=\pi(g\ell(x))$. Then $u(x)=g(\sigma(x)-\ell(x))$ lies in $(\rad N')_x$, satisfies $u(x)r=g\sigma(x)r$, and is killed by $r^2$ and $rp_j$. Extend it by $u p_0$. The factorization just constructed, with $p=p_0$, gives
+For $\xi\in W_0$, choose linearly $\ell(\xi)\in L$ with $\pi(g\sigma(\xi))=\pi(g\ell(\xi))$. Then $u(\xi)=g(\sigma(\xi)-\ell(\xi))$ lies in $(\rad N')_x$, satisfies $u(\xi)r=g\sigma(\xi)r$, and is killed by $r^2$ and $rp_j$. Extend it by $u p_0$. The factorization just constructed gives
 \[
  g(\phi-1)-ng\in\mathcal P_C(\Omega,N').
 \]

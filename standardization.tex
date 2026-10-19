@@ -1,4 +1,4 @@
-\section{Standardization over the finite field}\label{sec:standardization}
+\section{Standard forms over finite fields}\label{sec:standardization}
 Let $A$ be a basic representation-finite algebra over a finite field $k$ of characteristic two. In its geometric extension, select all nonstandard pennies with isolated roots. A penny is called \emph{active} when its choice in the mixed ray/stem classification is nonstandard and the critical path $a_nra_1$ is nonzero. The mixed classification and the disjointness of the supports are \cite[Theorems 6 and 10]{Bongartz13}. In this section all active roots are assumed isolated.
 
 \begin{proposition}\label{prop:actual-standardization}
@@ -23,11 +23,11 @@ Let $J$ be the sum of the selected projective-injective socles, descended to $k$
  \delta(r)=r^2,\qquad \delta(r^2)=\delta(r^3)=0,
  \qquad \delta|_{R_j}=0\quad(1\le j<n).
 \]
-The relations $r^2p_j=q_ir^2=0$ make it $C$-linear. A semisimple complement to $\rad A$ supplies, after extension, Frobenius-permuted primitive idempotents. Equation~\eqref{eq:root-normalization} shows that Frobenius sends $r$ to $r'+vr'^2+wr'^3$ and $r^2$ to $r'^2$. Consequently $F_T\delta=\delta F_R$, including the zero arm components. For each actual selected projective-injective $P_s$, the orbit sum descends to
+The relations $r^2p_j=q_ir^2=0$ make it $C$-linear. A semisimple complement to $\rad A$ supplies, after extension, Frobenius-permuted primitive idempotents. Equation~\eqref{eq:root-normalization} shows that Frobenius sends $r$ to $r'+vr'^2+wr'^3$ and $r^2$ to $r'^2$. Writing $F_R,F_T$ for the induced Frobenius maps on $R,T$, respectively, gives $F_T\delta=\delta F_R$, including the zero arm components. For each actual selected projective-injective $P_s$, the orbit sum descends to
 \[
  \delta_s:R_s\to T_s,\qquad R_s=\rad P_s,\quad T_s=P_s/\soc P_s.
 \]
-Put $h_s^0=h_s+\delta_s$. In geometric coordinates \eqref{eq:radical-identification} identifies this map with the standard boundary.
+Let $h_s:R_s\to T_s$ be the natural map and put $h_s^0=h_s+\delta_s$. In geometric coordinates \eqref{eq:radical-identification} identifies this map with the standard boundary.
 
 Every indecomposable other than a selected $P_s$ is a $C$-module by the essential-socle argument in Proposition~\ref{prop:isolated-comparison}. For any such module $X$,
 \begin{equation}\label{eq:boundary-homs}
@@ -54,7 +54,7 @@ For distinct selected roots the Hom space between $P_s^0,P_t^0$ is zero. Indeed,
 
 Take the sum $W^0$ of the new $P_s^0$ and all nonselected projectives $e_jC=e_jA$, and define $A^0=\End(W^0)$ with composition multiplication. The convention is appropriate for right modules, since $\End_A(A_A)=A$. This is a finite-dimensional algebra over $k$. Geometrically, the formulas are exactly the radical and socle-quotient description of the algebra obtained by changing the selected mixed choices to their standard choices.
 
-One can verify the root relation directly. Let $f_v:T\to R$ denote the map determined by $f_v(1)=v$, and set $z=(0,f_r)$ in the new root corner. Then
+For $v\in kr\oplus kr^2\oplus kr^3$, let $f_v:T\to R$ denote the $C$-linear map determined by $f_v(1)=v$, and set $z=(0,f_r)$ in the new root corner. Then
 \[
  z^2=(0,f_{r^2+r^3}),\qquad z^3=(0,f_{r^3}).
 \]
