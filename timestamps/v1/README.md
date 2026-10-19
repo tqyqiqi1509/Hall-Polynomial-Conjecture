@@ -7,10 +7,8 @@ The files were not recompiled or edited for timestamping.
 
 ## Status
 
-Calendar submissions were accepted on October 19, 2026 (Asia/Shanghai).
-The initial proofs are PENDING Bitcoin confirmation.
-A calendar receipt alone is not a completed Bitcoin timestamp.
-See status.json for the latest locally checked state.
+Both proofs have been upgraded with Bitcoin block attestations. The original digests and proof paths match the Merkle root of Bitcoin block 972025. Its header timestamp is 2026-10-19 00:39:43 +08:00 (Asia/Shanghai).
+Verification used Blockstream public block-header data, not a local full Bitcoin node. See verification.json for details.
 
 Keep each original file together with its corresponding .ots proof.
 The SHA-256 file digests were checked against the frozen v1 release.

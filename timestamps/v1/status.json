@@ -1,50 +1,32 @@
 {
-  "updated_utc": "2026-10-18T16:28:37.963895+00:00",
+  "updated_utc": "2026-10-19T00:40:56.727427+00:00",
   "files": [
     {
       "file": "Hall-Polynomial-Conjecture-v1.pdf",
       "sha256": "9e0aa0fb2298399473f38952c265e3726876e0aeb2beaa31963e74520b460175",
       "proof": "Hall-Polynomial-Conjecture-v1.pdf.ots",
-      "proof_sha256": "e9f268b4a1e1b51ba180de9e801dbeaf6817c1231b1bf3e7b1a93fd8db5e960f",
-      "bitcoin_block_heights": [],
-      "status": "pending_bitcoin_confirmation",
-      "errors": [
-        {
-          "calendar": "https://finney.calendar.eternitywall.com",
-          "upgrade_error": "'Pending confirmation in Bitcoin blockchain'"
-        },
-        {
-          "calendar": "https://bob.btc.calendar.opentimestamps.org",
-          "upgrade_error": "'Pending confirmation in Bitcoin blockchain'"
-        },
-        {
-          "calendar": "https://alice.btc.calendar.opentimestamps.org",
-          "upgrade_error": "'Pending confirmation in Bitcoin blockchain'"
-        }
-      ]
+      "proof_sha256": "0ab00a48f3879fbcb26ff50807b2ac5e62c7052e8f2c60f48d7d411fad8fbd98",
+      "bitcoin_block_heights": [
+        972057,
+        972026,
+        972025
+      ],
+      "status": "verified_against_public_block_header",
+      "errors": []
     },
     {
       "file": "Hall-Polynomial-Conjecture-v1-source.zip",
       "sha256": "2a1504837686060dd69107af77f5922f3e4a0408610d8baf26e6bde68b3d79c8",
       "proof": "Hall-Polynomial-Conjecture-v1-source.zip.ots",
-      "proof_sha256": "2799b9c1e03cbe43a13680d559dd3e34d6ef65fdae8e041afb9e340eb6c94062",
-      "bitcoin_block_heights": [],
-      "status": "pending_bitcoin_confirmation",
-      "errors": [
-        {
-          "calendar": "https://alice.btc.calendar.opentimestamps.org",
-          "upgrade_error": "'Pending confirmation in Bitcoin blockchain'"
-        },
-        {
-          "calendar": "https://finney.calendar.eternitywall.com",
-          "upgrade_error": "'Pending confirmation in Bitcoin blockchain'"
-        },
-        {
-          "calendar": "https://bob.btc.calendar.opentimestamps.org",
-          "upgrade_error": "'Pending confirmation in Bitcoin blockchain'"
-        }
-      ]
+      "proof_sha256": "f649950c2c94ef50b54950ff55b316b6bed9aa2599da3737fa9778aa19996d0f",
+      "bitcoin_block_heights": [
+        972025,
+        972057,
+        972026
+      ],
+      "status": "verified_against_public_block_header",
+      "errors": []
     }
   ],
-  "verification": "Proof parsing and original-file SHA-256 checked. A pending calendar attestation is not Bitcoin confirmation."
+  "verification": "Both original digests and OTS paths checked against block 972025 Merkle root and header hash, using Blockstream public block data. Not local full-node consensus verification."
 }
